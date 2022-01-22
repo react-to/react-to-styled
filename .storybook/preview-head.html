@@ -1,0 +1,186 @@
+<!-- Or you can load custom head-tag JavaScript: -->
+<script src="https://use.typekit.net/xxxyyy.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+/>
+
+<style>
+  @font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('NunitoSans-SemiBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('NunitoSans-Bold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('Roboto-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('Roboto-Bold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('Segoe UI.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('Segoe UI Bold.woff') format('woff');
+  }
+
+  * {
+    box-sizing: border-box;
+    scrollbar-color: #d0d0d0 #ddd 59;
+    scrollbar-width: thin;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
+  a {
+    text-decoration: none;
+    color: #212529;
+  }
+
+  input,
+  textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  table.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ced4da;
+  }
+
+  table.table th,
+  table.table td {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ced4da;
+  }
+
+  table.table input,
+  table.table [data-element='dropdown'] {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  table.table [data-element='dropdown'] {
+    border-left: 1px solid #ced4da;
+  }
+
+  .table thead {
+    background: #f7f9fc;
+  }
+
+  .table thead th {
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .table thead th :last-child {
+    width: 100px;
+  }
+
+  .table tbody td:last-child {
+    width: 100px;
+    padding-right: 1rem;
+    text-align: right;
+  }
+
+  .table tbody td:last-child [data-element='icon'] {
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    color: #adb5bd;
+    background: #e6e9f0;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .table tbody td:last-child [data-element='icon']:last-child {
+    margin-left: 0.5rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #dddddd59;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #d0d0d0;
+  }
+
+  table div {
+    cursor: default;
+  }
+</style>
+<script>
+  try {
+    Typekit.load()
+  } catch (e) {}
+</script>

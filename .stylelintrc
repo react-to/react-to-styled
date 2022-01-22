@@ -1,0 +1,20 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "alpha-value-notation": null,
+    "keyframes-name-pattern": null,
+    "value-keyword-case": null,
+    "no-eol-whitespace": null,
+    "string-quotes": null,
+    "selector-class-pattern": null,
+    "declaration-colon-newline-after": null,
+    "indentation": null,
+    "no-descending-specificity": null,
+    "block-closing-brace-newline-before": null
+  }
+}

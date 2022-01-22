@@ -1,0 +1,20 @@
+{
+  "name": "@react-to-styled/table",
+  "version": "0.0.2",
+  "description": "Table",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0",
+    "styled-components": "^5.1.1",
+    "@react-to-styled/essentials": "^0.0.1",
+    "@react-to-styled/loader": "^0.0.1"
+  },
+  "dependencies": {
+    "@react-to-styled/essentials": "^0.0.1",
+    "@react-to-styled/loader": "^0.0.1",
+    "styled-components": "^5.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

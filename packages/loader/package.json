@@ -1,0 +1,16 @@
+{
+  "name": "@react-to-styled/loader",
+  "version": "0.0.1",
+  "description": "Loader",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0",
+    "@react-to-styled/essentials": "^0.0.1"
+  },
+  "dependencies": {
+    "@react-to-styled/essentials": "^0.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2018",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/dist/**/*",
+    "**/__tests__/**/*",
+    "**/__mocks__/**/*"
+  ]
+}

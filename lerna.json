@@ -1,0 +1,15 @@
+{
+  "packages": ["apps/*", "packages/*"],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent",
+  "stream": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
+    "version": {
+      "message": "chore(release): Release"
+    }
+  }
+}

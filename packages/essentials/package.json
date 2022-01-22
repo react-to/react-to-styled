@@ -1,0 +1,12 @@
+{
+  "name": "@react-to-styled/essentials",
+  "version": "0.0.1",
+  "description": "Essentials",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
