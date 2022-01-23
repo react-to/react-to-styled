@@ -36,7 +36,6 @@
     "build-storybook": "build-storybook --quiet -s ./packages/essentials/fonts"
   },
   "devDependencies": {
-    
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@storybook/addon-actions": "^6.4.14",

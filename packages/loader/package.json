@@ -2,13 +2,28 @@
   "name": "@react-to-styled/loader",
   "version": "0.0.1",
   "description": "Loader",
+  "keywords": [
+    "react",
+    "styled-components",
+    "library",
+    "components",
+    "frontend",
+    "reuseable",
+    "ui",
+    "loader"
+  ],
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
-    "@react-to-styled/essentials": "^0.0.1"
+    "@react-to-styled/essentials": "^0.0.1",
+    "styled-components": "^5.1.1",
+    "typescript": "^4"
   },
   "dependencies": {
-    "@react-to-styled/essentials": "^0.0.1"
+    "@react-to-styled/essentials": "^0.0.1",
+    "styled-components": "^5.1.1",
+    "typescript": "^4",
+    "react": "^17.0.2"
   },
   "publishConfig": {
     "access": "public"
