@@ -1,15 +1,14 @@
+import { Colors } from '@react-to-styled/essentials'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-
-import { Colors } from '@react-to-styled/essentials'
 
 const LEFT_PAGE = 'LEFT'
 const RIGHT_PAGE = 'RIGHT'
 const BLANK_PAGE = '...'
 
-const range = (from, to, step = 1) => {
+const range = (from: number, to, step = 1) => {
   let i = from
-  const range = []
+  const range: (string | number)[] = []
 
   while (i <= to) {
     range.push(i)
@@ -20,7 +19,7 @@ const range = (from, to, step = 1) => {
 }
 
 interface Props {
-  onPagination: Function
+  onPagination: (page: number | string) => void
   currentPage: number
   totalRecords: number
   pageLimit: number
@@ -36,19 +35,19 @@ export const Paginator = ({
 }: Props) => {
   const pageNeighbours = 2
   const [totalPages, setTotalPages] = useState(1)
-  const [pages, setPages]: any = useState(1)
+  const [pages, setPages] = useState<(string | number)[]>([1])
 
-  const handleClick = page => evt => {
+  const handleClick = (page: number | string) => (evt: Event) => {
     evt.preventDefault()
     onPagination(page)
   }
 
-  const handleMoveLeft = evt => {
+  const handleMoveLeft = (evt: Event) => {
     evt.preventDefault()
     onPagination(currentPage - pageNeighbours * 2 - 1)
   }
 
-  const handleMoveRight = evt => {
+  const handleMoveRight = (evt: Event) => {
     evt.preventDefault()
     onPagination(currentPage + pageNeighbours * 2 + 1)
   }
@@ -188,7 +187,7 @@ const PaginatorItem = styled.li`
 
 const PaginatorAction = styled.a<{
   active?: boolean
-  onClick?: Function
+  onClick?: (evt: any) => void
   disabled?: boolean
 }>`
   font-size: 1rem;

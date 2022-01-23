@@ -1,27 +1,40 @@
+import { Colors } from '@react-to-styled/essentials'
+import { Loader } from '@react-to-styled/loader'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { Colors } from '@react-to-styled/essentials'
-import { Loader } from '@react-to-styled/loader'
 import { Paginator } from './Paginator'
+
+interface ColumnData {
+  header: string
+  Cell: (data: any) => React.ReactNode
+  width?: number
+}
 
 interface TableProps {
   data: any[]
-  columns: any
-  action?: Function
+  columns: Record<string, ColumnData>
+  action?: () => void
   currentPage?: number
   pageLimit?: number
-  onPagination?: Function
+  onPagination?: (page: string | number) => void
   totalRecords?: number
   header?: JSX.Element
   isLoading?: boolean
   expandable?: boolean
 }
 
-const Row = (props: any) => {
+const Row = (
+  props: Partial<TableProps> & {
+    rowIndex: number
+    rowData: Record<string, unknown>
+  },
+) => {
   const [isRowExpanded, setIsRowExpanded] = useState(false)
-  const [expandedRowData, setExpandedRowData] = useState({})
-  const onRowExpand = data => {
+  const [expandedRowData, setExpandedRowData] = useState<
+    Record<string, unknown>
+  >({})
+  const onRowExpand = (data: Record<string, unknown>) => {
     setExpandedRowData({ ...data })
     if (data) {
       setIsRowExpanded(true)
@@ -132,7 +145,7 @@ export const Table = ({
         <tbody>
           {data &&
             !isLoading &&
-            data.map((rowData, rowIndex) => (
+            data.map((rowData: Record<string, unknown>, rowIndex) => (
               <Row
                 key={rowIndex}
                 expandable={expandable}
@@ -206,7 +219,7 @@ export const Column = styled.td<{
   isFirst?: boolean
   isLast?: boolean
 }>`
-  ${({ width, isFirst, isLast }: any) => {
+  ${({ width, isFirst, isLast }) => {
     return `
       border-bottom: 1px solid ${Colors.borderColor};
       padding: 1rem 0;

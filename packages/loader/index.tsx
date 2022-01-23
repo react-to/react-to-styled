@@ -1,11 +1,10 @@
-import React, { FunctionComponent } from "react";
-import styled, { keyframes } from "styled-components";
-
-import { Colors } from "@react-to-styled/essentials";
+import { Colors } from '@react-to-styled/essentials'
+import React, { FunctionComponent } from 'react'
+import styled, { keyframes } from 'styled-components'
 
 interface Props {
-  fullScreen?: boolean;
-  height?: number;
+  fullScreen?: boolean
+  height?: number
 }
 export const Loader: FunctionComponent<Props> = ({
   fullScreen,
@@ -18,8 +17,8 @@ export const Loader: FunctionComponent<Props> = ({
     </Wrapper>
   ) : (
     <Element data-element="loader" {...props} />
-  );
-};
+  )
+}
 
 const loaderKeyframe = keyframes`
   0% {
@@ -29,15 +28,15 @@ const loaderKeyframe = keyframes`
   100% {
     transform: rotate(360deg);
   }
-`;
+`
 
 const Wrapper = styled.div<{ height?: number }>`
   width: 100%;
-  ${(props) => `height: ${props.height}px`};
+  ${props => `height: ${props.height}px`};
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Element = styled.div`
   width: 72px;
@@ -55,4 +54,4 @@ const Element = styled.div`
     height: 72px;
     border-radius: 50%;
   }
-`;
+`
