@@ -1,0 +1,8 @@
+{
+  "name": "stories",
+  "version": "1.0.0",
+  "dependencies": {
+    "@react-to-styled/table": "^0.0.2",
+    "@react-to-styled/loader": "^0.0.1"
+  }
+}

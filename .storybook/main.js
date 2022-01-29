@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../stories/*.stories.@(js|ts|tsx|mdx)'],
+  stories: ['../stories/**/*.stories.@(js|ts|tsx|mdx)'],
   reactOptions: {
     fastRefresh: true,
     strictMode: true,
