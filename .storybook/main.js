@@ -1,20 +1,34 @@
 module.exports = {
-  features: {
-    postcss: false,
+  stories: ['../stories/*.stories.@(js|ts|tsx|mdx)'],
+  reactOptions: {
+    fastRefresh: true,
+    strictMode: true,
   },
-  stories: ['../stories/*.stories.tsx'],
   addons: [
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        transcludeMarkdown: true,
+      },
+    },
+    '@storybook/addon-essentials',
     '@storybook/addon-actions',
+    '@storybook/addon-storysource',
     '@storybook/addon-links',
-    '@storybook/addon-docs',
     '@storybook/addon-controls',
     '@storybook/addon-measure',
     'storybook-addon-outline',
     '@storybook/addon-viewport',
   ],
+  core: {
+    builder: 'webpack4',
+  },
+  features: {
+    postcss: false,
+    modernInlineRender: true,
+  },
 
   webpackFinal: async config => {
-    // styles
     config.module.rules.push({
       test: /\.less$/,
       use: [
@@ -31,7 +45,6 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            // Prefer `dart-sass`
             implementation: require('sass'),
           },
         },
