@@ -563,14 +563,14 @@
           
       
           
-            window['FRAMEWORK_OPTIONS'] = {};
+            window['FRAMEWORK_OPTIONS'] = {"fastRefresh":true,"strictMode":true};
           
       
           
       
           
-            window['FEATURES'] = {"postcss":false,"emotionAlias":true,"warnOnLegacyHierarchySeparator":true};
+            window['FEATURES'] = {"postcss":false,"emotionAlias":true,"warnOnLegacyHierarchySeparator":true,"modernInlineRender":true};
           
       
           
-            window['STORIES'] = [{"titlePrefix":"","directory":"./stories","files":"*.stories.tsx","importPathMatcher":"^\\.[\\\\/](?:stories\\/(?!\\.)(?=.)[^/]*?\\.stories\\.tsx)$"}];</script><script src="runtime~main.f98cb45e.iframe.bundle.js"></script><script src="vendors~main.0c6b726b.iframe.bundle.js"></script><script src="main.ef14c240.iframe.bundle.js"></script></body></html>
+            window['STORIES'] = [{"titlePrefix":"","directory":"./stories","files":"**/*.stories.@(js|ts|tsx|mdx)","importPathMatcher":"^\\.[\\\\/](?:stories(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|ts|tsx|mdx))$"}];</script><script src="runtime~main.9ebf6525.iframe.bundle.js"></script><script src="vendors~main.2e800806.iframe.bundle.js"></script><script src="main.63daedd5.iframe.bundle.js"></script></body></html>
