@@ -4,6 +4,7 @@
   "useWorkspaces": true,
   "version": "independent",
   "stream": true,
+  "changelogPreset": "angular",
   "command": {
     "publish": {
       "conventionalCommits": true
