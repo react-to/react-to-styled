@@ -23,18 +23,18 @@
     "@react-to-styled/loader": "^0.0.1",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
-    "styled-components": "^5.1.1",
+    "styled-components": "^5",
     "typescript": "^4"
   },
   "dependencies": {
     "@react-to-styled/essentials": "^0.1.1",
     "@react-to-styled/loader": "^0.1.1",
-    "@types/styled-components": "^5.1.21",
     "react": "^17.0.2",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "typescript": "^4"
+    "typescript": "^4",
+    "@types/styled-components": "^5.1.21"
   },
   "publishConfig": {
     "access": "public"
