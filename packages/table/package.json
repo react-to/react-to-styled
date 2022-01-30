@@ -12,6 +12,7 @@
     "ui",
     "table"
   ],
+  "main": "index.ts",
   "homepage": "https://react-to.github.io/react-to-styled/?path=/story/table--page",
   "repository": {
     "type": "git",
