@@ -129,7 +129,9 @@ export const Paginator = ({
                 if (page === LEFT_PAGE) {
                   return (
                     <PaginatorItem key={index}>
-                      <PaginatorAction onClick={handleMoveLeft}>
+                      <PaginatorAction
+                        onClick={(event: never) => handleMoveLeft(event)}
+                      >
                         {'<<'}
                       </PaginatorAction>
                     </PaginatorItem>
@@ -143,7 +145,9 @@ export const Paginator = ({
                 if (page === RIGHT_PAGE) {
                   return (
                     <PaginatorItem key={index}>
-                      <PaginatorAction onClick={handleMoveRight}>
+                      <PaginatorAction
+                        onClick={(event: never) => handleMoveRight(event)}
+                      >
                         {'>>'}
                       </PaginatorAction>
                     </PaginatorItem>
@@ -158,7 +162,7 @@ export const Paginator = ({
                         (page === totalPages && currentPage === totalPages) ||
                         (page === 1 && currentPage === 1)
                       }
-                      onClick={handleClick(page)}
+                      onClick={(event: never) => handleClick(page)(event)}
                     >
                       {page}
                     </PaginatorAction>
