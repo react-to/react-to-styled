@@ -34,7 +34,7 @@ All our components depend on these dependencies
 
 ```json
 {
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0",
     "styled-components": "^5.1.1",
