@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.1.1...@react-to-styled/table@0.1.2) (2022-01-30)
+
+
+### Bug Fixes
+
+* **table:** Add main in package.json ([42ac059](https://github.com/react-to/react-to-styled/commit/42ac059151d381a2a907be1e38c5c63d0886f3f3))
+
+
+
+
+
 ## [0.1.1](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.1.0...@react-to-styled/table@0.1.1) (2022-01-30)
 
 **Note:** Version bump only for package @react-to-styled/table
