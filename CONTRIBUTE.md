@@ -22,7 +22,7 @@ First of all, thank you for showing interest in contributing, all your contribut
 
 ## Commit convention
 
-We use monorepo, and it is important to write correct commit messages to keep git history clean.<br/>
+We use monorepo, and it is important to write correct commit messages to keep git history clean.\
 See more on [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ## Get started locally
