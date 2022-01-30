@@ -1,41 +1,56 @@
 import { Meta, Canvas, Story } from '@storybook/addon-docs'
 import styled from 'styled-components'
 import { useState } from '@storybook/addons'
-import { Table, Paginator } from '@react-to-styled/table'
+import { Table } from '@react-to-styled/table'
 
-<Meta title="Table/All stories" component={Table} />
+<Meta title="Table/All table stories" component={Table} />
 
 export const Wrapper = styled.div`
   padding: 2rem;
 `
 
-export const columns = {
-  title: {
-    header: 'Title',
-    Cell: ({ data: { title } }) => <span>{title}</span>,
-  },
-  price: {
-    header: 'Price',
-    Cell: ({ data: { price } }) => <span>{price}</span>,
-  },
-}
-
-export const mockedData = Array(100)
-  .fill(true)
-  .map((_, index) => ({
-    title: `Row ${index + 1}`,
-    price: (Math.random() * 100).toFixed(2),
-  }))
-
 export const Template = args => {
+  /**
+   * Mocked data
+   */
+  const mockedData = Array(100)
+    .fill(true)
+    .map((_, index) => ({
+      title: `Row ${index + 1}`,
+      price: (Math.random() * 100).toFixed(2),
+    }))
+  /**
+   * Columns
+   */
+  const columns = {
+    title: {
+      header: 'Title',
+      Cell: ({ data: { title } }) => <span>{title}</span>,
+    },
+    price: {
+      header: 'Price',
+      Cell: ({ data: { price } }) => <span>{price}</span>,
+    },
+  }
+  /**
+   * Page limit
+   */
   const PAGE_LIMIT = 10
+  /**
+   * Initial slice of mocked data
+   */
   const [data, setData] = useState(mockedData.slice(0, PAGE_LIMIT))
+  /**
+   * Current page
+   */
   const [currentPage, setCurrentPage] = useState(1)
+  /**
+   * Pagination
+   */
   const onPagination = p => {
     setData(mockedData.slice(p * PAGE_LIMIT - PAGE_LIMIT, p * PAGE_LIMIT))
     setCurrentPage(p)
   }
-  console.log(currentPage)
   return (
     <Wrapper>
       <Table
@@ -52,10 +67,7 @@ export const Template = args => {
 }
 
 <Canvas>
-  <Story
-    name="Lazy table"
-    argTypes={{ currentPage: { defaultValue: 1, control: { type: 'number' } } }}
-  >
+  <Story name="Lazy table" parameters={{ controls: { exclude: /.*/s } }}>
     {Template.bind({})}
   </Story>
 </Canvas>
