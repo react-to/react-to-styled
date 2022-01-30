@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.1.3...@react-to-styled/table@0.1.4) (2022-01-30)
+
+
+### Bug Fixes
+
+* **table:** Quickly fix Typescript with never ([667fe33](https://github.com/react-to/react-to-styled/commit/667fe3377091ffe38abcc58203a4ae1240f4db5b))
+
+
+
+
+
 ## [0.1.3](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.1.1...@react-to-styled/table@0.1.3) (2022-01-30)
 
 
