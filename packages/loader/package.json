@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Loader",
   "keywords": [
     "react",
@@ -20,7 +20,7 @@
     "typescript": "^4"
   },
   "dependencies": {
-    "@react-to-styled/essentials": "^0.1.0",
+    "@react-to-styled/essentials": "^0.1.1",
     "react": "^17.0.2",
     "styled-components": "^5.1.1"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/essentials",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Essentials",
   "peerDependencies": {
     "typescript": "^4"
