@@ -31,6 +31,7 @@
     "prepare": "husky install",
     "bootstrap": "lerna bootstrap",
     "test": "jest",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .ts,.tsx,.mdx --cache --color packages/ stories/ && stylelint --cache \"packages/**/*.tsx\"",
     "format": "prettier --write \"packages/**/*.tsx\" \"stories/*.mdx\"",
     "storybook": "start-storybook -p 6006 -s ./packages/essentials/fonts",
