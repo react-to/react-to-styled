@@ -62,8 +62,9 @@ export const Paginator = ({
 
       let pagesI = range(startPage, endPage)
 
-      const hasLeftSpill = startPage > 2
-      const hasRightSpill = totalPages - endPage > 1
+      const hasLeftSpill = startPage > 2 && currentPage > 5
+      const hasRightSpill =
+        totalPages - endPage > 1 && totalPages - currentPage > 4
       const spillOffset = totalNumbers - (pagesI.length + 1)
 
       switch (true) {
