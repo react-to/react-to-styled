@@ -190,7 +190,7 @@ const PaginatorItem = styled.li`
 
 const PaginatorAction = styled.a<{
   active?: boolean
-  onClick?: (evt: any) => void
+  onClick?: (evt: never) => void
   disabled?: boolean
 }>`
   font-size: 1rem;
