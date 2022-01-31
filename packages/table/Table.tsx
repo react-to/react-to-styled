@@ -188,10 +188,6 @@ const Wrapper = styled.div`
   > table {
     width: 100%;
     border-collapse: collapse;
-
-    > tbody tr div {
-      color: ${Colors.grey};
-    }
   }
 `
 
