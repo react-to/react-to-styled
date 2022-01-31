@@ -1,0 +1,68 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+import styled from 'styled-components'
+import { Table } from '@react-to-styled/table'
+import { Colors } from '@react-to-styled/essentials'
+import { useState } from 'react'
+
+<Meta title="Table/All table stories" component={Table} />
+
+export const Wrapper = styled.div`
+  padding: 2rem;
+`
+
+export const ExpandedRow = styled.div`
+  background: ${Colors.chartTitleBackground};
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid ${Colors.borderColor};
+`
+
+export const Template = args => {
+  const columns = {
+    title: {
+      header: 'Title',
+      Cell: ({ data: { title } }) => <span>{title}</span>,
+    },
+    price: {
+      header: 'Price',
+      Cell: ({ data: { price } }) => <span>{price}</span>,
+    },
+    action: {
+      header: 'Action',
+      Cell: ({ onRowExpand }) => {
+        const [isExpanded, setIsExpanded] = useState(false)
+        const onExpand = () => {
+          setIsExpanded(!isExpanded)
+          onRowExpand(!isExpanded)
+        }
+        return (
+          <button onClick={() => onExpand()}>
+            {isExpanded ? 'Close' : 'Expand'}
+          </button>
+        )
+      },
+      ExpandedCell: () => {
+        return <ExpandedRow>Expanded row</ExpandedRow>
+      },
+      width: 100,
+    },
+  }
+  const data = [
+    { title: 'One', price: 100 },
+    { title: 'Two', price: 200 },
+  ]
+  return (
+    <Wrapper>
+      <Table {...args} expandable columns={columns} data={data} />
+    </Wrapper>
+  )
+}
+
+## Expandable table
+
+<Canvas>
+  <Story name="Expanded Row" parameters={{ controls: { exclude: /.*/s } }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
