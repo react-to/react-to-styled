@@ -159,10 +159,7 @@ export const Paginator = ({
                   <PaginatorItem key={index}>
                     <PaginatorAction
                       active={currentPage === page}
-                      disabled={
-                        (page === totalPages && currentPage === totalPages) ||
-                        (page === 1 && currentPage === 1)
-                      }
+                      disabled={currentPage === page}
                       onClick={(event: never) => handleClick(page)(event)}
                     >
                       {page}
@@ -202,6 +199,7 @@ const PaginatorAction = styled.a<{
   display: flex;
   padding: 0 5px;
   border: 1px solid transparent;
+  ${props => props.disabled && 'pointer-events: none;'};
   ${props =>
     props.active &&
     `
