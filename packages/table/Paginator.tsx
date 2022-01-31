@@ -179,6 +179,7 @@ export const Paginator = ({
 
 const PaginatorWrapper = styled.nav`
   text-align: center;
+  border-bottom: 1px solid ${Colors.borderColor};
 `
 
 const StyledPaginator = styled.ul`
