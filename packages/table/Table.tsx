@@ -9,6 +9,7 @@ interface ColumnData {
   header: string
   Cell: (data: any) => React.ReactNode
   width?: number
+  ExpandedCell?: (data: any) => React.ReactNode
 }
 
 interface TableProps {
