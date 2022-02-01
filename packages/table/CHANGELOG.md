@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.1.4...@react-to-styled/table@0.2.1) (2022-02-01)
+
+
+### Bug Fixes
+
+* **table:** Add border-bottom in Paginator ([2b0a52a](https://github.com/react-to/react-to-styled/commit/2b0a52a1c0926b1a5b2661a79a1b2bc77b5ba0ec))
+* **table:** Disable Paginator current page ([36c1832](https://github.com/react-to/react-to-styled/commit/36c1832b312db36dac3218fd1cb50360c00383fd))
+* **table:** Fix breaking currentPage in Paginator: ([3d1877c](https://github.com/react-to/react-to-styled/commit/3d1877cf7828525e26620bdc4114c1fabffd01aa))
+
+
+### Features
+
+* **table:** Add ExpandedCell type to ColumnData ([0fbf660](https://github.com/react-to/react-to-styled/commit/0fbf66074b94541502d6cbbdee814a1e54e401db))
+* **table:** Add never type on PaginatorAction onClick: ([35624f3](https://github.com/react-to/react-to-styled/commit/35624f30054ef376b5b04b35008132209cb3f81b))
+* **table:** Remove color grey for div ([611beb0](https://github.com/react-to/react-to-styled/commit/611beb0a286851da47e26cd2649885a10c812432))
+
+
+
+
+
 # [0.2.0](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.1.4...@react-to-styled/table@0.2.0) (2022-02-01)
 
 
