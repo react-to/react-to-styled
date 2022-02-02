@@ -198,11 +198,13 @@ Here you can see examples of some possible scenarios.
         <Wrapper>
           <Table
             columns={defaultColumns}
-            currentPage={currentPage}
-            onPagination={onPagination}
+            paginationProps={{
+              currentPage,
+              onPagination,
+              pageLimit: PAGE_LIMIT,
+              totalRecords: mockedData.length,
+            }}
             data={data}
-            pageLimit={PAGE_LIMIT}
-            totalRecords={mockedData.length}
           />
         </Wrapper>
       )

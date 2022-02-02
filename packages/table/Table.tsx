@@ -3,177 +3,217 @@ import { Loader } from '@react-to-styled/loader'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { Paginator } from './Paginator'
+import { Paginator, PaginatorProps } from './Paginator'
 
+/**
+ * Table data.
+ */
+type TableData = Record<string, unknown>
+
+/**
+ * Cell props representing `<td>` element.
+ */
+interface CellProps {
+  /**
+   * Function that if triggered with some data, it will show {@link ColumnData.ExpandedCell}
+   */
+  onRowExpand: (data?: TableData) => void
+  /**
+   * Row data passed in Cell.
+   */
+  data: TableData
+  /**
+   * Row index.
+   */
+  index: number
+}
+
+/**
+ * Column props representing `<th>` element.
+ */
 interface ColumnData {
+  /**
+   * Header content
+   */
   header: string
-  Cell: (data: any) => React.ReactNode
+  /**
+   * A Cell component that will be placed in this Column in every row.
+   */
+  Cell: (props: CellProps) => JSX.Element
+  /**
+   * Optional width prop, used to limit the column width
+   */
   width?: number
-  ExpandedCell?: (data: any) => React.ReactNode
+  /**
+   * Optional component that will render if {@link CellProps.onRowExpand} is triggered in Cell with some data.
+   */
+  ExpandedCell?: (props: Omit<CellProps, 'onRowExpand'>) => JSX.Element
 }
 
+/**
+ * Table props.
+ */
 interface TableProps {
-  data: any[]
+  /**
+   * Required data prop, should be array of objects.
+   */
+  data: TableData[]
+  /**
+   * Required columns prop, used to layout the content in cells and columns
+   */
   columns: Record<string, ColumnData>
-  action?: () => void
-  currentPage?: number
-  pageLimit?: number
-  onPagination?: (page: string | number) => void
-  totalRecords?: number
-  header?: JSX.Element
+  /**
+   * Use it if you need pagination in Table footer.
+   */
+  paginationProps?: Omit<PaginatorProps, 'isFetching'>
+  /**
+   * Renders Loader instead of table content.
+   */
   isLoading?: boolean
-  expandable?: boolean
 }
 
-const Row = (
-  props: Partial<TableProps> & {
-    rowIndex: number
-    rowData: Record<string, unknown>
-  },
-) => {
+/**
+ * Row props.
+ */
+interface RowProps extends Pick<TableProps, 'columns'> {
+  /**
+   * Row index.
+   */
+  rowIndex: number
+  /**
+   * Renders Loader instead of table content.
+   */
+  rowData: TableData
+}
+
+const Row = (props: RowProps) => {
   const [isRowExpanded, setIsRowExpanded] = useState(false)
-  const [expandedRowData, setExpandedRowData] = useState<
-    Record<string, unknown>
-  >({})
-  const onRowExpand = (data: Record<string, unknown>) => {
+  const [expandedRowData, setExpandedRowData] = useState<TableData>({})
+
+  const onRowExpand = (data: TableData) => {
     setExpandedRowData({ ...data })
+
     if (data) {
       setIsRowExpanded(true)
     } else {
       setIsRowExpanded(false)
     }
   }
+
   const Row = (
     <tr>
-      {Object.values(props.columns).map(({ Cell }: any, index) => {
-        return Cell ? (
+      {Object.values(props.columns).map(({ Cell }, index) => {
+        if (!Cell) {
+          return null
+        }
+
+        return (
           <Column
             isFirst={index === 0}
             isLast={--Object.keys(props.columns).length === index}
             key={index}
           >
             <Cell
-              action={props.action}
               onRowExpand={onRowExpand}
               data={props.rowData}
               index={props.rowIndex}
             />
           </Column>
-        ) : null
+        )
       })}
     </tr>
   )
-  if (props.expandable) {
-    return (
-      <>
-        {Row}
-        {isRowExpanded && (
-          <tr>
-            {Object.values(props.columns).map(
-              ({ ExpandedCell }: any, index) => {
-                return ExpandedCell ? (
-                  <ExpandedColumn
-                    colSpan={Object.values(props.columns).length}
-                    key={index}
-                  >
-                    <ExpandedCell
-                      action={props.action}
-                      data={{ ...expandedRowData, ...props.rowData }}
-                      index={props.rowIndex}
-                    />
-                  </ExpandedColumn>
-                ) : null
-              },
-            )}
-          </tr>
-        )}
-      </>
-    )
-  } else {
-    return Row
-  }
+
+  return (
+    <>
+      {Row}
+      {isRowExpanded && (
+        <tr>
+          {Object.values(props.columns).map(({ ExpandedCell }, index) => {
+            if (!ExpandedCell) {
+              return null
+            }
+
+            return (
+              <ExpandedColumn
+                colSpan={Object.values(props.columns).length}
+                key={index}
+              >
+                <ExpandedCell
+                  data={{ ...expandedRowData, ...props.rowData }}
+                  index={props.rowIndex}
+                />
+              </ExpandedColumn>
+            )
+          })}
+        </tr>
+      )}
+    </>
+  )
 }
 
 export const Table = ({
   data,
   columns,
-  action,
-  totalRecords,
-  pageLimit,
-  currentPage = 1,
-  onPagination,
-  header,
-  expandable,
+  paginationProps,
   isLoading,
   ...props
 }: TableProps) => {
   return (
     <Wrapper data-element="tableWrapper" {...props}>
-      {/* TODO: do this better */}
-      {header && (
-        <table data-element="tableFilter">
-          <tbody>
-            <tr>
-              <Column width="100%" isFirst isLast>
-                {header}
-              </Column>
-            </tr>
-          </tbody>
-        </table>
-      )}
       <TableWrapper data-element="table">
         <THead>
           <tr>
             {columns &&
               Object.values(columns).map(({ header, width }, index) => {
-                return header && !isLoading ? (
-                  <Column
-                    width={index === 0 && isLoading ? '100%' : width}
-                    isFirst={index === 0}
-                    isLast={Object.keys(columns).length - 1 === index}
-                    key={index}
-                  >
-                    <TableHeaderText>{header}</TableHeaderText>
-                  </Column>
-                ) : index === 0 && isLoading ? (
-                  <Column width={'100%'} isFirst isLast key={index}>
-                    <TableHeaderText> </TableHeaderText>
-                  </Column>
-                ) : null
+                if (header && !isLoading) {
+                  return (
+                    <Column
+                      width={width}
+                      isFirst={index === 0}
+                      isLast={Object.keys(columns).length - 1 === index}
+                      key={index}
+                    >
+                      <TableHeaderText>{header}</TableHeaderText>
+                    </Column>
+                  )
+                }
+
+                if (index === 0 && isLoading) {
+                  return (
+                    <Column width={'100%'} isFirst isLast key={index}>
+                      <TableHeaderText> </TableHeaderText>
+                    </Column>
+                  )
+                }
+
+                return null
               })}
           </tr>
         </THead>
         <tbody>
-          {data &&
-            !isLoading &&
-            data.map((rowData: Record<string, unknown>, rowIndex) => (
-              <Row
-                key={rowIndex}
-                expandable={expandable}
-                columns={columns}
-                rowIndex={rowIndex}
-                action={action}
-                rowData={rowData}
-              />
-            ))}
-          {isLoading && (
+          {isLoading ? (
             <tr>
               <LoadingColumn>
                 <Loader />
               </LoadingColumn>
             </tr>
+          ) : (
+            data?.map((rowData, rowIndex) => (
+              <Row
+                key={rowIndex}
+                columns={columns}
+                rowIndex={rowIndex}
+                rowData={rowData}
+              />
+            ))
           )}
         </tbody>
       </TableWrapper>
 
-      {/* Pagination */}
-      <Paginator
-        onPagination={onPagination}
-        currentPage={currentPage}
-        isFetching={isLoading}
-        pageLimit={pageLimit}
-        totalRecords={totalRecords}
-      />
+      {paginationProps && (
+        <Paginator {...paginationProps} isFetching={isLoading} />
+      )}
     </Wrapper>
   )
 }

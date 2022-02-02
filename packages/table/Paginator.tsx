@@ -18,7 +18,7 @@ const range = (from: number, to, step = 1) => {
   return range
 }
 
-interface Props {
+export interface PaginatorProps {
   onPagination: (page: number | string) => void
   currentPage: number
   totalRecords: number
@@ -28,11 +28,11 @@ interface Props {
 
 export const Paginator = ({
   onPagination,
-  currentPage,
+  currentPage = 1,
   totalRecords,
   pageLimit,
   isFetching,
-}: Props) => {
+}: PaginatorProps) => {
   const pageNeighbours = 2
   const [totalPages, setTotalPages] = useState(1)
   const [pages, setPages] = useState<(string | number)[]>([1])
