@@ -18,6 +18,14 @@
     "type": "git",
     "url": "https://github.com/react-to/react-to-styled.git"
   },
+  "scripts": {
+    "typecheck": "tsc --declaration --resolveJsonModule",
+    "prepublish": "yarn typecheck && cp *.md ./dist",
+    "postpublish": "rm -rf ./dist"
+  },
+  "files": [
+    "dist/"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "@react-to-styled/essentials": "^0.0.1",
