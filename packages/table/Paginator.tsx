@@ -6,9 +6,11 @@ const LEFT_PAGE = 'LEFT'
 const RIGHT_PAGE = 'RIGHT'
 const BLANK_PAGE = '...'
 
-const range = (from: number, to, step = 1) => {
+type PagesRange = 'LEFT' | 'RIGHT' | '...' | number
+
+const range = (from: number, to, step = 1): PagesRange[] => {
   let i = from
-  const range: (string | number)[] = []
+  const range: PagesRange[] = []
 
   while (i <= to) {
     range.push(i)
@@ -19,7 +21,7 @@ const range = (from: number, to, step = 1) => {
 }
 
 export interface PaginatorProps {
-  onPagination: (page: number | string) => void
+  onPagination: (page: number) => void
   currentPage: number
   totalRecords: number
   pageLimit: number
@@ -35,9 +37,9 @@ export const Paginator = ({
 }: PaginatorProps) => {
   const pageNeighbours = 2
   const [totalPages, setTotalPages] = useState(1)
-  const [pages, setPages] = useState<(string | number)[]>([1])
+  const [pages, setPages] = useState<PagesRange[]>([1])
 
-  const handleClick = (page: number | string) => (evt: Event) => {
+  const handleClick = (page: number) => (evt: Event) => {
     evt.preventDefault()
     onPagination(page)
   }
@@ -52,7 +54,7 @@ export const Paginator = ({
     onPagination(currentPage + pageNeighbours * 2 + 1)
   }
 
-  const fetchPageNumbers = () => {
+  const fetchPageNumbers = (): PagesRange[] => {
     const totalNumbers = pageNeighbours * 2 + 3
     const totalBlocks = totalNumbers + 2
 
