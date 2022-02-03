@@ -184,6 +184,10 @@ Here you can see examples of some possible scenarios.
        */
       const [data, setData] = useState(mockedData.slice(0, PAGE_LIMIT))
       /**
+       * Initial slice of mocked data
+       */
+      const [isLoading, setIsLoading] = useState(false)
+      /**
        * Current page
        */
       const [currentPage, setCurrentPage] = useState(1)
@@ -191,8 +195,10 @@ Here you can see examples of some possible scenarios.
        * Pagination
        */
       const onPagination = p => {
+        setIsLoading(true)
         setData(mockedData.slice(p * PAGE_LIMIT - PAGE_LIMIT, p * PAGE_LIMIT))
         setCurrentPage(p)
+        setTimeout(() => setIsLoading(false), 1000)
       }
       return (
         <Wrapper>
@@ -204,6 +210,7 @@ Here you can see examples of some possible scenarios.
               pageLimit: PAGE_LIMIT,
               totalRecords: mockedData.length,
             }}
+            isLoading={isLoading}
             data={data}
           />
         </Wrapper>
