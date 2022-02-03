@@ -2,7 +2,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/react-to/react-to-styled)](https://github.com/react-to/react-to-styled/graphs/contributors)
 [![npm](https://img.shields.io/npm/v/@react-to-styled/essentials)](https://www.npmjs.com/package/@react-to-styled/essentials)
 [![npm](https://img.shields.io/npm/dm/@react-to-styled/essentials)](https://www.npmjs.com/package/@react-to-styled/essentials)
-[![First good issue](https://img.shields.io/github/labels/react-to/react-to-styled/good%20first%20issue?label=Contribute)](https://github.com/mantinedev/mantine/labels/help%20wanted)
+[![First good issue](https://img.shields.io/github/labels/react-to/react-to-styled/good%20first%20issue?label=Contribute)](https://github.com/react-to/react-to-styled/labels/good%20first%20issue)
 
 # React to styled
 
@@ -23,4 +23,4 @@
 
 We are always happy to help you get started:
 
-- [GitHub Discussions](https://github.com/mantinedev/mantine/discussions) – ask anything about the project or give feedback
+- [GitHub Discussions](https://github.com/react-to/react-to-styled/discussions) – ask anything about the project or give feedback
