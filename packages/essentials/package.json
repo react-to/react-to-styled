@@ -2,27 +2,32 @@
   "name": "@react-to-styled/essentials",
   "version": "0.1.2",
   "description": "Essentials",
+  "keywords": [
+    "react",
+    "css-in-js",
+    "library",
+    "styled-components",
+    "reuseable",
+    "ui",
+    "essentials"
+  ],
   "main": "dist/index.js",
-  "homepage": "https://react-to.github.io/react-to-styled/?path=/story/table--page",
+  "homepage": "https://react-to.github.io/react-to-styled",
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-to/react-to-styled.git"
+    "url": "https://github.com/react-to/react-to-styled.git",
+    "directory": "packages/essentials"
   },
   "scripts": {
-    "typecheck": "tsc --declaration --resolveJsonModule",
-    "prepublish": "yarn typecheck"
+    "build": "tsc --declaration && cp -R fonts ./dist/fonts",
+    "prepublish": "rm -rf ./dist",
+    "prepublishOnly": "yarn build"
   },
   "files": [
     "dist/"
   ],
   "license": "MIT",
   "peerDependencies": {
-    "typescript": "^4"
-  },
-  "devDependencies": {
-    "typescript": "^4"
-  },
-  "publishConfig": {
-    "access": "public"
+    "styled-components": ">=5"
   }
 }
