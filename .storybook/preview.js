@@ -1,3 +1,14 @@
+import { EssentialStyle } from '@react-to-styled/essentials'
+
+export const decorators = [
+  Story => (
+    <div style={{ padding: '2rem' }}>
+      {Story()}
+      <EssentialStyle />
+    </div>
+  ),
+]
+
 export const parameters = {
   options: {
     storySort: ([, { kind: a }], [, { kind: b }]) => {
