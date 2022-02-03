@@ -2,22 +2,37 @@ import { Colors } from '@react-to-styled/essentials'
 import React, { FunctionComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-interface Props {
-  fullScreen?: boolean
-  height?: number
+/**
+ * Loader props.
+ */
+interface LoaderProps {
+  /**
+   * Sets loader in the center of the page.
+   */
+  isFullScreen?: boolean
+  /**
+   * Instead of `isFullScreen` this can set minHeight of the wrapper and loder will be in the center.
+   */
+  wrapperHeight?: number | string
+  /**
+   * Sets the loader radius.
+   */
+  loaderSize?: number
 }
-export const Loader: FunctionComponent<Props> = ({
-  fullScreen,
-  height = 300,
-  ...props
+
+export const Loader: FunctionComponent<LoaderProps> = ({
+  isFullScreen,
+  wrapperHeight = 300,
+  loaderSize = 72,
 }) => {
-  return fullScreen ? (
-    <Wrapper height={height}>
-      <Element data-element="loader" {...props} />
-    </Wrapper>
-  ) : (
-    <Element data-element="loader" {...props} />
-  )
+  if (isFullScreen) {
+    return (
+      <Wrapper wrapperHeight={wrapperHeight}>
+        <Element data-element="loader" loaderSize={loaderSize} />
+      </Wrapper>
+    )
+  }
+  return <Element data-element="loader" loaderSize={loaderSize} />
 }
 
 const loaderKeyframe = keyframes`
@@ -30,15 +45,18 @@ const loaderKeyframe = keyframes`
   }
 `
 
-const Wrapper = styled.div<{ height?: number }>`
+const Wrapper = styled.div<Pick<LoaderProps, 'wrapperHeight'>>`
   width: 100%;
-  ${props => `height: ${props.height}px`};
+  ${({ wrapperHeight }) =>
+    `height: ${
+      typeof wrapperHeight === 'number' ? `${wrapperHeight}px` : wrapperHeight
+    }`};
   display: flex;
   align-items: center;
   justify-content: center;
 `
 
-const Element = styled.div`
+const Element = styled.div<Pick<LoaderProps, 'loaderSize'>>`
   width: 72px;
   height: 72px;
   border-radius: 50%;
@@ -48,10 +66,14 @@ const Element = styled.div`
   border-left-color: ${Colors.darkBlue};
   transform: translateZ(0);
   animation: ${loaderKeyframe} 1.1s infinite linear;
-
-  ::after {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-  }
+  ${({ loaderSize }) => `
+    width: ${loaderSize}px;
+    height: ${loaderSize}px;
+    
+    ::after {
+      width: ${loaderSize}px;
+      height: ${loaderSize}px;
+      border-radius: 50%;
+    }
+  `};
 `
