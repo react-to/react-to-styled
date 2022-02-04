@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.2.4...@react-to-styled/table@0.3.0) (2022-02-04)
+
+
+### Features
+
+* **table:** Add font-family OpenSans ([ebecb2f](https://github.com/react-to/react-to-styled/commit/ebecb2f7a0ede10c32424f5a0375b8b8df771666))
+
+
+
+
+
 ## [0.2.4](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.2.3...@react-to-styled/table@0.2.4) (2022-02-02)
 
 **Note:** Version bump only for package @react-to-styled/table

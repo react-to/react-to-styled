@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/loader",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Loader",
   "keywords": [
     "react",
@@ -30,8 +30,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "styled-components": ">=5",
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "styled-components": ">=5"
   }
 }
