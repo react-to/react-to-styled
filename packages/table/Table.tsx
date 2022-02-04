@@ -1,4 +1,4 @@
-import { Colors } from '@react-to-styled/essentials'
+import { Colors, Fonts } from '@react-to-styled/essentials'
 import { Loader } from '@react-to-styled/loader'
 import React, { useState } from 'react'
 import styled from 'styled-components'
@@ -224,6 +224,7 @@ const Wrapper = styled.div`
   border: 1px solid ${Colors.borderColor};
   background-color: #fff;
   border-bottom: 0;
+  font-family: ${Fonts.OpenSans}, serif;
 
   > table {
     width: 100%;
