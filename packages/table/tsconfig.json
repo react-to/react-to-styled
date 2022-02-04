@@ -4,5 +4,5 @@
     "outDir": "dist",
     "types": ["node", "react", "styled-components", "jest"]
   },
-  "include": ["./", "package.json"]
+  "include": ["./"]
 }
