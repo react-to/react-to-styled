@@ -2,6 +2,10 @@
   "name": "@react-to-styled/table",
   "version": "0.3.0",
   "description": "Table",
+  "author": {
+    "name": "Aleksa Toljic",
+    "email": "aleksa.toljic@gmail.com"
+  },
   "keywords": [
     "react",
     "css-in-js",
@@ -17,7 +21,7 @@
   "homepage": "https://react-to.github.io/react-to-styled/?path=/story/table--page",
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-to/react-to-styled.git",
+    "url": "git+https://github.com/react-to/react-to-styled.git",
     "directory": "packages/table"
   },
   "scripts": {
