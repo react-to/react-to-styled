@@ -1,7 +1,8 @@
 {
   "name": "@react-to-styled/table",
   "version": "0.3.1",
-  "description": "Table",
+  "description": "Table component with React and styled-components",
+  "license": "MIT",
   "author": {
     "name": "Aleksa Toljic",
     "email": "aleksa.toljic@gmail.com"
@@ -17,22 +18,24 @@
     "ui",
     "table"
   ],
-  "main": "dist/index.js",
   "homepage": "https://react-to.github.io/react-to-styled/?path=/story/table--page",
+  "bugs": "https://github.com/react-to/react-to-styled/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-to/react-to-styled.git",
+    "url": "https://github.com/react-to/react-to-styled.git",
     "directory": "packages/table"
   },
+  "main": "dist/index.js",
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "../../LICENSE",
+    "dist/"
+  ],
   "scripts": {
     "typecheck": "tsc --declaration",
     "prepublish": "yarn typecheck"
   },
-  "files": [
-    "CHANGELOG.md",
-    "dist/"
-  ],
-  "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
