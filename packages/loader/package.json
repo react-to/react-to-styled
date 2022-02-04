@@ -26,6 +26,8 @@
   },
   "files": [
     "CHANGELOG.md",
+    "README.md",
+    "../../LICENSE",
     "dist/"
   ],
   "license": "MIT",
