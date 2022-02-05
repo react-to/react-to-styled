@@ -17,7 +17,7 @@ export interface CellProps {
   /**
    * Function that if triggered with some data, it will show {@link ColumnData.ExpandedCell}
    */
-  onRowExpand: (data?: TableData) => void
+  onRowExpand: (data?: TableData | boolean) => void
   /**
    * Row data passed in Cell.
    */
