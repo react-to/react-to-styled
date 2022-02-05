@@ -17,7 +17,7 @@
 
 - [`@react-to-styled/essentials`](https://github.com/react-to/react-to-styled/tree/main/packages/essentials) – essential library that our other components use
 - [`@react-to-styled/table`](https://github.com/react-to/react-to-styled/tree/main/packages/table) – table related components
-- [`@react-to-styled/loader`](https://github.com/react-to/react-to-styled/tree/main/packages/loader) – loader related components
+- [`@react-to-styled/loader`](https://github.com/react-to/react-to-styled/tree/main/packages/loader) – loader component
 
 ## Getting help
 
