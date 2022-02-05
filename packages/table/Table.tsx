@@ -53,7 +53,7 @@ interface ColumnData {
 /**
  * Table props.
  */
-interface TableProps {
+export interface TableProps {
   /**
    * Required data prop, should be array of objects.
    */
