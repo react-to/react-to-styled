@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.3.3...@react-to-styled/table@0.4.0) (2022-02-05)
+
+
+### Features
+
+* Add export for `CellProps` type ([6f1f2cd](https://github.com/react-to/react-to-styled/commit/6f1f2cd401d96035c5ef9c3876714a05ea6f6b58))
+
+
+
+
+
 ## [0.3.3](https://github.com/react-to/react-to-styled/compare/@react-to-styled/table@0.3.2...@react-to-styled/table@0.3.3) (2022-02-04)
 
 **Note:** Version bump only for package @react-to-styled/table
