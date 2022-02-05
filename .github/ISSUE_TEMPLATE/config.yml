@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & discussions 🤔
+    url: https://github.com/react-to/react-to-styled/discussions
+    about: Ask questions, request features & discuss RFCs
