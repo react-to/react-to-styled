@@ -4,7 +4,22 @@
   "useWorkspaces": true,
   "version": "independent",
   "stream": true,
-  "changelogPreset": "angular",
+  "changelogPreset": {
+    "name": "angular",
+    "types": [
+      { "type": "feat", "section": "Features" },
+      { "type": "fix", "section": "Bug Fixes" },
+      { "type": "style", "section": "Visual changes" },
+      { "type": "refactor", "section": "Improvements" },
+      { "type": "perf", "section": "Improvements" },
+      { "type": "types", "section": "Improvements" },
+      { "type": "chore", "hidden": true },
+      { "type": "test", "hidden": true },
+      { "type": "build", "hidden": true },
+      { "type": "ci", "hidden": true },
+      { "type": "revert", "hidden": true }
+    ]
+  },
   "command": {
     "publish": {
       "conventionalCommits": true
