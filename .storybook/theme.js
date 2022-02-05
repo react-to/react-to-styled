@@ -23,7 +23,7 @@ export default create({
 
   // Toolbar default and active colors
   barTextColor: Colors.gray90,
-  barSelectedColor: Colors.gray80,
+  barSelectedColor: Colors.gray90,
   barBg: Colors.gray30,
 
   // Form colors
@@ -33,5 +33,5 @@ export default create({
   inputBorderRadius: 4,
 
   brandTitle: 'react-to-styled',
-  brandUrl: 'https://react-to-styled.com',
+  brandUrl: 'https://github.com/react-to',
 })
