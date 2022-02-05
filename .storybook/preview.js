@@ -1,4 +1,5 @@
 import { EssentialStyle } from '@react-to-styled/essentials'
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 
 export const decorators = [
   Story => (
@@ -10,6 +11,10 @@ export const decorators = [
 ]
 
 export const parameters = {
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
   options: {
     storySort: ([, { kind: a }], [, { kind: b }]) => {
       if (b.includes('Overview')) {
