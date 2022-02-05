@@ -1,5 +1,5 @@
 import { EssentialStyle } from '@react-to-styled/essentials'
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
+import { DocsPage, DocsContainer } from '@storybook/addon-docs'
 
 export const decorators = [
   Story => (
