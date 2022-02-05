@@ -19,7 +19,7 @@
     "directory": "packages/essentials"
   },
   "scripts": {
-    "build": "tsc --declaration && cp -R fonts ./dist/fonts",
+    "build": "mkdir -p dist/fonts && cp -R fonts ./dist/fonts && tsc --declaration",
     "prepublish": "rm -rf ./dist",
     "prepublishOnly": "yarn build"
   },
