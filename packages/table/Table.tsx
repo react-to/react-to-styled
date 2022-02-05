@@ -13,7 +13,7 @@ type TableData = Record<string, unknown>
 /**
  * Cell props representing `<td>` element.
  */
-interface CellProps {
+export interface CellProps {
   /**
    * Function that if triggered with some data, it will show {@link ColumnData.ExpandedCell}
    */
