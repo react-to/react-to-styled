@@ -158,9 +158,9 @@ export const Table = ({
   ...props
 }: TableProps) => {
   return (
-    <Wrapper data-element="tableWrapper" {...props}>
-      <TableWrapper data-element="table">
-        <THead>
+    <Wrapper data-element="tableWrapper" className="rts-table__container">
+      <TableWrapper data-element="table" {...props}>
+        <THead className="rts-table__header">
           <tr>
             {columns &&
               Object.values(columns).map(({ header, width }, index) => {
@@ -171,6 +171,7 @@ export const Table = ({
                       isFirst={index === 0}
                       isLast={Object.keys(columns).length - 1 === index}
                       key={index}
+                      className="rts-table__column"
                     >
                       <TableHeaderText>{header}</TableHeaderText>
                     </Column>
@@ -179,7 +180,13 @@ export const Table = ({
 
                 if (index === 0 && isLoading) {
                   return (
-                    <Column width={'100%'} isFirst isLast key={index}>
+                    <Column
+                      width="100%"
+                      isFirst
+                      isLast
+                      key={index}
+                      className="rts-table__column"
+                    >
                       <TableHeaderText> </TableHeaderText>
                     </Column>
                   )
@@ -192,7 +199,7 @@ export const Table = ({
         <tbody>
           {isLoading ? (
             <tr>
-              <LoadingColumn>
+              <LoadingColumn className="rts-table__column--loading">
                 <Loader />
               </LoadingColumn>
             </tr>
@@ -203,6 +210,7 @@ export const Table = ({
                 columns={columns}
                 rowIndex={rowIndex}
                 rowData={rowData}
+                className="rts-table__row"
               />
             ))
           )}

@@ -125,15 +125,22 @@ export const Paginator = ({
   return (
     <>
       {pages.length > 1 && !isFetching && (
-        <PaginatorWrapper data-element="pagination">
+        <PaginatorWrapper
+          data-element="pagination"
+          className="rts-table__paginator"
+        >
           <StyledPaginator>
             {pages.length &&
               pages.map((page, index) => {
                 if (page === LEFT_PAGE) {
                   return (
-                    <PaginatorItem key={index}>
+                    <PaginatorItem
+                      key={index}
+                      className="rts-table__paginator--item"
+                    >
                       <PaginatorAction
                         onClick={(event: never) => handleMoveLeft(event)}
+                        className="rts-table__paginator--link"
                       >
                         {'<<'}
                       </PaginatorAction>
@@ -147,9 +154,13 @@ export const Paginator = ({
 
                 if (page === RIGHT_PAGE) {
                   return (
-                    <PaginatorItem key={index}>
+                    <PaginatorItem
+                      key={index}
+                      className="rts-table__paginator--item"
+                    >
                       <PaginatorAction
                         onClick={(event: never) => handleMoveRight(event)}
+                        className="rts-table__paginator--link"
                       >
                         {'>>'}
                       </PaginatorAction>
@@ -158,11 +169,15 @@ export const Paginator = ({
                 }
 
                 return (
-                  <PaginatorItem key={index}>
+                  <PaginatorItem
+                    key={index}
+                    className="rts-table__paginator--item"
+                  >
                     <PaginatorAction
                       active={currentPage === page}
                       disabled={currentPage === page}
                       onClick={(event: never) => handleClick(page)(event)}
+                      className="rts-table__paginator--link"
                     >
                       {page}
                     </PaginatorAction>
