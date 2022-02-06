@@ -26,6 +26,10 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
+    'react/jsx-curly-brace-presence': [
+      1,
+      { props: 'never', children: 'never' },
+    ],
     'import/no-unresolved': [1, { commonjs: true }],
     'import/first': 2,
     'import/newline-after-import': 1,
