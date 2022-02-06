@@ -53,7 +53,7 @@ interface ColumnData {
 /**
  * Table props.
  */
-export interface TableProps {
+export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
   /**
    * Required data prop, should be array of objects.
    */
@@ -75,7 +75,9 @@ export interface TableProps {
 /**
  * Row props.
  */
-interface RowProps extends Pick<TableProps, 'columns'> {
+interface RowProps
+  extends Pick<TableProps, 'columns'>,
+    React.ComponentPropsWithoutRef<'tr'> {
   /**
    * Row index.
    */
@@ -86,7 +88,7 @@ interface RowProps extends Pick<TableProps, 'columns'> {
   rowData: TableData
 }
 
-const Row = (props: RowProps) => {
+const Row = ({ columns, rowData, rowIndex, ...props }: RowProps) => {
   const [isRowExpanded, setIsRowExpanded] = useState(false)
   const [expandedRowData, setExpandedRowData] = useState<TableData>({})
 
@@ -101,8 +103,8 @@ const Row = (props: RowProps) => {
   }
 
   const Row = (
-    <tr>
-      {Object.values(props.columns).map(({ Cell }, index) => {
+    <tr {...props}>
+      {Object.values(columns).map(({ Cell }, index) => {
         if (!Cell) {
           return null
         }
@@ -110,14 +112,10 @@ const Row = (props: RowProps) => {
         return (
           <Column
             isFirst={index === 0}
-            isLast={--Object.keys(props.columns).length === index}
+            isLast={--Object.keys(columns).length === index}
             key={index}
           >
-            <Cell
-              onRowExpand={onRowExpand}
-              data={props.rowData}
-              index={props.rowIndex}
-            />
+            <Cell onRowExpand={onRowExpand} data={rowData} index={rowIndex} />
           </Column>
         )
       })}
@@ -129,19 +127,19 @@ const Row = (props: RowProps) => {
       {Row}
       {isRowExpanded && (
         <tr>
-          {Object.values(props.columns).map(({ ExpandedCell }, index) => {
+          {Object.values(columns).map(({ ExpandedCell }, index) => {
             if (!ExpandedCell) {
               return null
             }
 
             return (
               <ExpandedColumn
-                colSpan={Object.values(props.columns).length}
+                colSpan={Object.values(columns).length}
                 key={index}
               >
                 <ExpandedCell
-                  data={{ ...expandedRowData, ...props.rowData }}
-                  index={props.rowIndex}
+                  data={{ ...expandedRowData, ...rowData }}
+                  index={rowIndex}
                 />
               </ExpandedColumn>
             )
