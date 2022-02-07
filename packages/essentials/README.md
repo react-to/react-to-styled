@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@react-to-styled/essentials)](https://www.npmjs.com/package/@react-to-styled/essentials)
 [![npm](https://img.shields.io/npm/dm/@react-to-styled/essentials)](https://www.npmjs.com/package/@react-to-styled/essentials)
 [![First good issue](https://img.shields.io/github/labels/react-to/react-to-styled/good%20first%20issue?label=Contribute)](https://github.com/react-to/react-to-styled/labels/good%20first%20issue)
+[![Package size](https://img.shields.io/bundlephobia/min/@react-to-styled/essentials/latest)](https://www.npmjs.com/package/@react-to-styled/essentials)
 
 # React to styled essentials
 
