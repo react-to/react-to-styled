@@ -14,7 +14,7 @@
     "loader"
   ],
   "main": "dist/index.js",
-  "homepage": "https://react-to.github.io/react-to-styled",
+  "homepage": "https://react-to.github.io/react-to-styled/?path=/docs/loader--page",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-to/react-to-styled.git",
