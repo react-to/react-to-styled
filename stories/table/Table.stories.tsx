@@ -1,20 +1,21 @@
+import { Meta } from '@storybook/react'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CellProps, Table, TruncatedText } from '@react-to-styled/table'
 import { Colors } from '@react-to-styled/essentials'
 
-import AllTableStoriesDocs from './AllTableStoriesDocs.mdx'
+import TableDocsPage from './TableDocsPage.mdx'
 
 export default {
-  title: 'Table/All table stories',
+  title: 'Table/All stories',
   component: Table,
   parameters: {
-    docs: { page: AllTableStoriesDocs },
+    docs: { page: TableDocsPage },
     controls: {
       exclude: /.*/s,
     },
   },
-}
+} as Meta
 
 const defaultColumns = {
   title: {
