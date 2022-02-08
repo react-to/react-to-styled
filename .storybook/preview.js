@@ -17,11 +17,14 @@ export const parameters = {
   },
   options: {
     storySort: ([, { kind: a }], [, { kind: b }]) => {
-      if (b.includes('Overview')) {
-        return +1
+      if (a.includes('All stories')) {
+        return 1
+      }
+      if (b.includes('All stories')) {
+        return -1
       }
 
-      return (a > b) - (a < b)
+      return a.localeCompare(b)
     },
   },
   controls: { expanded: true, hideNoControlsWarning: true },
