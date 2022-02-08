@@ -29,6 +29,7 @@ See more on [conventional commits](https://www.conventionalcommits.org/en/v1.0.0
 
 - Fork repository, clone or download your fork
 - Install dependencies with yarn – `yarn`
+- Bootstrap the monorepo – `lerna bootstrap`
 - To start storybook – `yarn storybook`
 
 ##npm scripts
