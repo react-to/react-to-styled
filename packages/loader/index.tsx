@@ -5,13 +5,9 @@ import styled, { keyframes } from 'styled-components'
 /**
  * Loader props.
  */
-interface LoaderProps {
+export interface LoaderProps {
   /**
-   * Sets loader in the center of the page.
-   */
-  isFullScreen?: boolean
-  /**
-   * Instead of `isFullScreen` this can set minHeight of the wrapper and loder will be in the center.
+   * This can set minHeight of the wrapper and loader will be in the center.
    */
   wrapperHeight?: number | string
   /**
@@ -21,18 +17,28 @@ interface LoaderProps {
 }
 
 export const Loader: FunctionComponent<LoaderProps> = ({
-  isFullScreen,
-  wrapperHeight = 300,
+  wrapperHeight,
   loaderSize = 72,
 }) => {
-  if (isFullScreen) {
+  if (wrapperHeight) {
     return (
-      <Wrapper wrapperHeight={wrapperHeight}>
-        <Element data-element="loader" loaderSize={loaderSize} />
+      <Wrapper className="rts-loader__container" wrapperHeight={wrapperHeight}>
+        <Element
+          className="rts-loader"
+          data-element="loader"
+          loaderSize={loaderSize}
+        />
       </Wrapper>
     )
   }
-  return <Element data-element="loader" loaderSize={loaderSize} />
+
+  return (
+    <Element
+      className="rts-loader"
+      data-element="loader"
+      loaderSize={loaderSize}
+    />
+  )
 }
 
 const loaderKeyframe = keyframes`
