@@ -8,4 +8,7 @@ export const Colors = {
   gray90: '#4E4B66',
   chartTitleBackground: '#F7F9FC',
   redBtn: '#FF837F',
+
+  toggleActive: '#364dcd',
+  toggleBackground: '#939AAD',
 }
