@@ -9,6 +9,6 @@ export const Colors = {
   chartTitleBackground: '#F7F9FC',
   redBtn: '#FF837F',
 
-  toggleActive: '#364dcd',
-  toggleBackground: '#939AAD',
+  toggleActive: '#57D087',
+  toggleBackground: '#ADB5BD',
 }
