@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/react-to/react-to-styled/compare/@react-to-styled/loader@0.1.4...@react-to-styled/loader@0.1.5) (2022-02-08)
+
+**Note:** Version bump only for package @react-to-styled/loader
+
+
+
+
+
 ## [0.1.4](https://github.com/react-to/react-to-styled/compare/@react-to-styled/loader@0.1.3...@react-to-styled/loader@0.1.4) (2022-02-04)
 
 **Note:** Version bump only for package @react-to-styled/loader
