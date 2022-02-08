@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/toggle",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Toggle input",
   "author": {
     "name": "Aleksa Toljic",
@@ -46,6 +46,6 @@
     "styled-components": ">=5"
   },
   "dependencies": {
-    "@react-to-styled/essentials": "^0.1.6"
+    "@react-to-styled/essentials": "^0.1.7"
   }
 }
