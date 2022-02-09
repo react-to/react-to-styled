@@ -15,7 +15,8 @@
     "frontend",
     "reuseable",
     "ui",
-    "toggle"
+    "toggle",
+    "switch"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

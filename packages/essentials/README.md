@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/react-to/react-to-styled/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/react-to/react-to-styled)](https://github.com/react-to/react-to-styled/graphs/contributors)
 [![npm](https://img.shields.io/npm/v/@react-to-styled/essentials)](https://www.npmjs.com/package/@react-to-styled/essentials)
 [![npm](https://img.shields.io/npm/dm/@react-to-styled/essentials)](https://www.npmjs.com/package/@react-to-styled/essentials)
@@ -25,6 +25,12 @@ Install with yarn:
 yarn add @react-to-styled/essentials
 ```
 
+## Import
+
+```tsx
+import { EssentialStyle, Colors, Fonts } from '@react-to-styled/essentials'
+```
+
 ## Usage
 
 Here is a quick example how to import essential styles:
@@ -46,6 +52,4 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'))
 ```
 
-## License
-
-MIT
+You can also check our [storybook](https://react-to.github.io/react-to-styled) for more examples

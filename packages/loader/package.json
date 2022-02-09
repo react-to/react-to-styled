@@ -2,6 +2,10 @@
   "name": "@react-to-styled/loader",
   "version": "0.1.6",
   "description": "Loader",
+  "author": {
+    "name": "Aleksa Toljic",
+    "email": "aleksa.toljic@gmail.com"
+  },
   "keywords": [
     "react",
     "styled-components",
@@ -14,11 +18,16 @@
     "loader"
   ],
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://react-to.github.io/react-to-styled/?path=/docs/loader--page",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-to/react-to-styled.git",
     "directory": "packages/loader"
+  },
+  "bugs": {
+    "url": "https://github.com/react-to/react-to-styled/issues",
+    "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
     "build": "tsc --declaration",

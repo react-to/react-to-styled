@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/npm/l/@react-to-styled/components)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/npm/l/@react-to-styled/components)](https://github.com/react-to/react-to-styled/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/react-to/react-to-styled)](https://github.com/react-to/react-to-styled/graphs/contributors)
 [![npm](https://img.shields.io/npm/v/@react-to-styled/components)](https://www.npmjs.com/package/@react-to-styled/components)
 [![npm](https://img.shields.io/npm/dm/@react-to-styled/components)](https://www.npmjs.com/package/@react-to-styled/components)
@@ -29,6 +29,3 @@ yarn add @react-to-styled/components
 
 For usage please visit our [storybook](https://react-to.github.io/react-to-styled) documentation
 
-## License
-
-MIT

@@ -2,6 +2,10 @@
   "name": "@react-to-styled/essentials",
   "version": "0.1.7",
   "description": "Essentials",
+  "author": {
+    "name": "Aleksa Toljic",
+    "email": "aleksa.toljic@gmail.com"
+  },
   "keywords": [
     "react",
     "css-in-js",
@@ -12,11 +16,16 @@
     "essentials"
   ],
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://react-to.github.io/react-to-styled",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-to/react-to-styled.git",
     "directory": "packages/essentials"
+  },
+  "bugs": {
+    "url": "https://github.com/react-to/react-to-styled/issues",
+    "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
     "build": "mkdir -p dist/fonts && cp -R fonts ./dist/fonts && tsc --declaration",
