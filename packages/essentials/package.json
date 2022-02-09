@@ -28,7 +28,7 @@
     "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
-    "build": "mkdir -p dist/fonts && cp -R fonts ./dist/fonts && tsc --declaration",
+    "build": "mkdir -p dist/ && cp -R fonts ./dist && tsc --declaration",
     "prepublish": "rm -rf ./dist",
     "prepublishOnly": "yarn build"
   },
