@@ -35,7 +35,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .ts,.tsx,.mdx --cache --color packages/ stories/ && stylelint --cache \"packages/**/*.tsx\"",
     "format": "prettier --write \"packages/**/*.tsx\" \"stories/*.mdx\"",
-    "storybook": "start-storybook -p 6006 -s ./packages/essentials/fonts",
+    "storybook": "start-storybook -p 6006",
     "predeploy": "yarn build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static -b gh-pages-new",
     "build-storybook": "build-storybook --quiet -s ./packages/essentials/fonts"
