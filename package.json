@@ -25,7 +25,8 @@
   "license": "MIT",
   "author": "Aleksa Toljic <aleksa.toljic@gmail.com>",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages"
   ],
   "scripts": {
     "prepare": "husky install",
