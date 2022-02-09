@@ -1,0 +1,50 @@
+{
+  "name": "@react-to-styled/components",
+  "version": "0.0.1",
+  "description": "All react-to-styled components",
+  "author": {
+    "name": "Aleksa Toljic",
+    "email": "aleksa.toljic@gmail.com"
+  },
+  "keywords": [
+    "react",
+    "styled-components",
+    "css-in-js",
+    "library",
+    "components",
+    "frontend",
+    "reuseable",
+    "ui"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://react-to.github.io/react-to-styled",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-to/react-to-styled.git",
+    "directory": "packages"
+  },
+  "bugs": {
+    "url": "https://github.com/react-to/react-to-styled/issues",
+    "email": "aleksa.toljic@gmail.com"
+  },
+  "scripts": {
+    "build": "tsc --declaration",
+    "prepublish": "yarn build"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "../LICENSE",
+    "dist/"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "styled-components": ">=5"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
