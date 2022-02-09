@@ -12,7 +12,6 @@
 - [Documentation](https://react-to.github.io/react-to-styled/)
 - [Contributing](https://github.com/react-to/react-to-styled/blob/main/CONTRIBUTE.md)
 - [Ask question or give feedback](https://github.com/react-to/react-to-styled/discussions)
-- [Changelog](https://github.com/react-to/react-to-styled/blob/main/CHANGELOG.md)
 
 ## Packages
 
