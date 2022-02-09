@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/react-to/react-to-styled/compare/@react-to-styled/components@0.1.0...@react-to-styled/components@0.2.0) (2022-02-09)
+
+
+### Features
+
+* Update all README.md and package.json files ([00ed140](https://github.com/react-to/react-to-styled/commit/00ed140369992b2c3a502eec4db1bef58b1a03c9))
+
+
+
+
+
 # 0.1.0 (2022-02-09)
 
 

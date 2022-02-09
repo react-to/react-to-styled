@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/react-to/react-to-styled/compare/@react-to-styled/toggle@0.1.3...@react-to-styled/toggle@0.2.0) (2022-02-09)
+
+
+### Features
+
+* Update all README.md and package.json files ([00ed140](https://github.com/react-to/react-to-styled/commit/00ed140369992b2c3a502eec4db1bef58b1a03c9))
+
+
+
+
+
 ## [0.1.3](https://github.com/react-to/react-to-styled/compare/@react-to-styled/toggle@0.1.1...@react-to-styled/toggle@0.1.3) (2022-02-09)
 
 **Note:** Version bump only for package @react-to-styled/toggle
