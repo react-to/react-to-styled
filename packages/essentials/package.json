@@ -33,6 +33,9 @@
     "prepublishOnly": "yarn build"
   },
   "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "../../LICENSE",
     "dist/"
   ],
   "license": "MIT",
