@@ -1,0 +1,26 @@
+name: Auto merge dependencies
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - yarn.lock
+      - package.json
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+  repository-projects: write
+
+jobs:
+  automerge:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3.0.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          target: patch
