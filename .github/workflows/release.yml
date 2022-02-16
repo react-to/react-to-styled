@@ -40,9 +40,9 @@ jobs:
       #
       # Install dependencies and build the app
       #
-      - name: Build React App
+      - name: Build components
         id: build-project
-        run: yarn install --frozen-lockfile && yarn bootstrap yarn build
+        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build
 
   test:
     needs: [build]
