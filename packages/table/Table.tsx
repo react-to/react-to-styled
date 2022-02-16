@@ -228,7 +228,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid ${Colors.borderColor};
-  background-color: #fff;
+  background-color: ${Colors.background};
   border-bottom: 0;
   font-family: ${Fonts.OpenSans}, serif;
 
@@ -292,5 +292,5 @@ export const LoadingColumn = styled(Column)`
 
 //TODO@all new color put it in variables
 const THead = styled.thead`
-  background-color: ${Colors.chartTitleBackground};
+  background-color: ${Colors.grayBackground};
 `

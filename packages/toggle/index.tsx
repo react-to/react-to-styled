@@ -96,7 +96,7 @@ const ToggleBackground = styled.span<Omit<ToggleStyle, 'width'>>`
     height: ${({ circleSize }) => circleSize}px;
     border-radius: 50%;
     transition: 0.5s ease transform, 0.2s ease background;
-    background: white;
+    background: ${Colors.background};
     z-index: 0;
     box-shadow: 0 3px 6px #00000080;
   }

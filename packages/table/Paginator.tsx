@@ -220,9 +220,9 @@ const PaginatorAction = styled.a<{
   ${props =>
     props.active &&
     `
-      color: ${Colors.redBtn};
+      color: ${Colors.paginatorActiveBorder};
       cursor: default;
-      border: 1px solid ${Colors.redBtn};
+      border: 1px solid ${Colors.paginatorActiveBorder};
       border-radius: 5px;
     `};
 `

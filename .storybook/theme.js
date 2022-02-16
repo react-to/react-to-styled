@@ -4,12 +4,12 @@ import { create } from '@storybook/theming'
 export default create({
   base: 'light',
 
-  colorPrimary: Colors.purple70,
-  colorSecondary: Colors.gray90,
+  colorPrimary: Colors.storybookPrimary,
+  colorSecondary: Colors.storybookGray,
 
   // UI
   appBg: Colors.background,
-  appContentBg: Colors.chartTitleBackground,
+  appContentBg: Colors.grayBackground,
   appBorderColor: Colors.borderColor,
   appBorderRadius: 4,
 
@@ -18,18 +18,18 @@ export default create({
   fontCode: 'monospace',
 
   // Text colors
-  textColor: Colors.gray90,
-  textInverseColor: Colors.gray90,
+  textColor: Colors.storybookGray,
+  textInverseColor: Colors.storybookGray,
 
   // Toolbar default and active colors
-  barTextColor: Colors.gray90,
-  barSelectedColor: Colors.gray90,
-  barBg: Colors.gray30,
+  barTextColor: Colors.storybookGray,
+  barSelectedColor: Colors.storybookGray,
+  barBg: Colors.storybookGrayLight,
 
   // Form colors
   inputBg: Colors.background,
   inputBorder: Colors.borderColor,
-  inputTextColor: Colors.gray90,
+  inputTextColor: Colors.storybookGray,
   inputBorderRadius: 4,
 
   brandTitle: 'react-to-styled',

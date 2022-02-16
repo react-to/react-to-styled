@@ -175,7 +175,7 @@ const WrappedText = styled.div`
 `
 
 const ExpandedRow = styled.div`
-  background: ${Colors.chartTitleBackground};
+  background: ${Colors.grayBackground};
   display: flex;
   flex-direction: column;
   padding: 1rem 1.4rem;
