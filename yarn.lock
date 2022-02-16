@@ -2778,15 +2778,15 @@
     util-deprecate "^1.0.2"
 
 "@storybook/addon-links@^6.4.14":
-  version "6.4.14"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.4.14.tgz#7dedd5502cf1fecdcfc845e59a10769cb32ec175"
-  integrity sha512-Y+5tdmAdkFzk0OC9wJnHdpVfhq3uqqlrAUFE3QYeof4uL6wLNSr2pl0BzCGQtnTfLs0i0bExXaTP5pZhwSnQoA==
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.4.19.tgz#001f26c4ffc7d36fd6018b8a137449948b337869"
+  integrity sha512-ebFHYlGDQkHSmI5QEJb1NxGNToVOLgjKkxXUe+JXX7AfHvrWiXVrN/57aOtBPZzj4h2jRPRTZgwR5glhPIlfEQ==
   dependencies:
-    "@storybook/addons" "6.4.14"
-    "@storybook/client-logger" "6.4.14"
-    "@storybook/core-events" "6.4.14"
+    "@storybook/addons" "6.4.19"
+    "@storybook/client-logger" "6.4.19"
+    "@storybook/core-events" "6.4.19"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
-    "@storybook/router" "6.4.14"
+    "@storybook/router" "6.4.19"
     "@types/qs" "^6.9.5"
     core-js "^3.8.2"
     global "^4.4.0"
