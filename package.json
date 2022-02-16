@@ -31,6 +31,7 @@
   "scripts": {
     "prepare": "husky install",
     "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .ts,.tsx,.mdx --cache --color packages/ stories/ && stylelint --cache \"packages/**/*.tsx\"",

@@ -28,9 +28,8 @@
     "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
-    "build": "mkdir -p dist/ && cp -R fonts ./dist && tsc --declaration",
-    "prepublish": "rm -rf ./dist",
-    "prepublishOnly": "yarn build"
+    "build": "tsc --declaration && cp -R fonts ./dist",
+    "prepublish": "yarn build"
   },
   "files": [
     "README.md",
