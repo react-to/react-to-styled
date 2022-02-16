@@ -50,25 +50,9 @@ module.exports = {
     'no-whitespace-before-property': 'error',
     'react/display-name': 'off',
     'arrow-parens': [1, 'as-needed'],
-    '@typescript-eslint/camelcase': 0,
     'jsx-a11y/heading-has-content': 0,
     'prettier/prettier': 1,
-    '@typescript-eslint/no-unused-vars': 1,
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'none',
-          requireLast: false,
-        },
-        singleline: {
-          delimiter: 'semi',
-          requireLast: false,
-        },
-      },
-    ],
+
     // TODO: turn on later
     'react/prop-types': 'off',
   },
@@ -92,6 +76,27 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
+
+      rules: {
+        '@typescript-eslint/camelcase': 0,
+        '@typescript-eslint/no-unused-vars': 1,
+        '@typescript-eslint/no-explicit-any': 0,
+        '@typescript-eslint/no-var-requires': 0,
+        '@typescript-eslint/explicit-function-return-type': 0,
+        '@typescript-eslint/member-delimiter-style': [
+          'error',
+          {
+            multiline: {
+              delimiter: 'none',
+              requireLast: false,
+            },
+            singleline: {
+              delimiter: 'semi',
+              requireLast: false,
+            },
+          },
+        ],
+      },
 
       parserOptions: {
         project: ['./tsconfig.json'], // Specify it only for TypeScript files
