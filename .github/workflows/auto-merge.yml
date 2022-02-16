@@ -7,16 +7,14 @@ on:
       - yarn.lock
       - package.json
 
-permissions:
-  pull-requests: write
-  issues: write
-  contents: write
-  repository-projects: write
-
 jobs:
   automerge:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
+    
+    permissions:
+      pull-requests: write
+      contents: write
 
     steps:
       - uses: fastify/github-action-merge-dependabot@v3.0.2
