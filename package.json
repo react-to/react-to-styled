@@ -41,7 +41,7 @@
     "build-storybook": "build-storybook --quiet -s ./packages/essentials/fonts"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/loader": "^2.0.0",
     "babel-loader": "^8.2.3",
     "@types/mdx": "^2.0.1",
     "@commitlint/cli": "^16.1.0",
