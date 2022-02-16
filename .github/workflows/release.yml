@@ -1,0 +1,132 @@
+name: release
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Checkout the repository.
+      #
+      - uses: actions/checkout@v2
+        id: checkout
+
+      #
+      # Cache files
+      #
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        id: use-cache
+        with:
+          path: |
+            node_modules/
+            .eslintcache
+            **/.cache
+            packages/**/node_modules/
+          key: develop-styled-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            develop-styled-
+
+      #
+      # Install dependencies and build the app
+      #
+      - name: Build React App
+        id: build-project
+        run: yarn install --frozen-lockfile && yarn bootstrap yarn build
+
+  test:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Checkout the repository.
+      #
+      - uses: actions/checkout@v2
+        id: checkout
+
+      #
+      # Cache files
+      #
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        id: cache
+        with:
+          path: |
+            node_modules/
+            .eslintcache
+            **/.cache
+            packages/**/node_modules/
+          key: develop-styled-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            develop-styled-
+            
+      #
+      # Run lint
+      #
+      - name: Lint
+        id: lint
+        run: NODE=production yarn lint
+        
+      #
+      # Run type-check
+      #
+      - name: Typecheck
+        id: typecheck
+        run: yarn typecheck
+
+  release:
+    if: ${{ github.event_name != 'pull_request' }}
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Checkout the repository.
+      #
+      - uses: actions/checkout@v2
+        id: checkout
+
+      #
+      # Set git identity to be a bot
+      #
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        id: cache
+        with:
+          path: |
+            node_modules/
+            .eslintcache
+            **/.cache
+            packages/**/node_modules/
+          key: develop-styled-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            develop-styled-
+
+      #
+      # Set git identity to be a bot
+      #
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '42103905+github-actions[bot]@users.noreply.github.com'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+
+      #
+      # Publish with lerna if not already published
+      #
+      - name: Create Release
+        if: |
+          env.GIT_COMMIT_MESSAGE &&
+          !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release')
+        run: lerna publish --yes
