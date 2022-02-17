@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.5 (2022-02-17)
+
+
+### Bug Fixes
+
+* **root:** Add no-verify-access for lerna publish ([5ce2b0f](https://github.com/react-to/react-to-styled/commit/5ce2b0f74758bf4b944133a7a92633a0a90d9b4f))
+
+
+
+
+
 ## 0.5.4 (2022-02-17)
 
 
