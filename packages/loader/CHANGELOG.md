@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.4 (2022-02-17)
+
+
+### Bug Fixes
+
+* **root:** Try to add token to setup-node ([108c6a0](https://github.com/react-to/react-to-styled/commit/108c6a0c46c02a33f653726599a029d5b07c195d))
+
+
+
+
+
 ## 0.2.3 (2022-02-17)
 
 
