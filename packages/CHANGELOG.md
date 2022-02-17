@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2022-02-17)
+
+
+### Bug Fixes
+
+* **root:** Add `setup-node` action ([11f82f2](https://github.com/react-to/react-to-styled/commit/11f82f230571154ab8f46bb528b64bc2dd137d0b))
+
+
+
+
+
 ## 0.2.2 (2022-02-17)
 
 
