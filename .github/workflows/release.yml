@@ -138,6 +138,4 @@ jobs:
         if: |
           env.GIT_COMMIT_MESSAGE &&
           !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release')
-        run: lerna publish --yes
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: lerna publish --yes --no-verify-access
