@@ -123,6 +123,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_SECRET }}
           GITHUB_ACTOR: ${{ github.actor }}
+      
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
 
       #
       # Publish with lerna if not already published
