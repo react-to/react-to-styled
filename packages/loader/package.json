@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/loader",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Loader",
   "author": {
     "name": "Aleksa Toljic",
@@ -46,6 +46,6 @@
     "styled-components": ">=5"
   },
   "dependencies": {
-    "@react-to-styled/essentials": "^0.2.1"
+    "@react-to-styled/essentials": "^0.2.2"
   }
 }
