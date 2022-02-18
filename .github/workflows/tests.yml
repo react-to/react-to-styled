@@ -1,4 +1,4 @@
-name: tests
+name: Lint
 
 on:
   push:
@@ -46,7 +46,8 @@ jobs:
         id: build-project
         run: yarn install --frozen-lockfile && yarn bootstrap && yarn build
 
-  test:
+  tests:
+    name: Tests
     needs: [build]
     runs-on: ubuntu-latest
     steps:
