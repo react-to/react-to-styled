@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.8-alpha.0 (2022-02-18)
+
+
+### Bug Fixes
+
+* **root:** Invalid variable ([6df9402](https://github.com/react-to/react-to-styled/commit/6df9402ba0d11484a1c732e33efc80e7af3e21d8))
+
+
+
+
+
 ## 0.5.7 (2022-02-18)
 
 
