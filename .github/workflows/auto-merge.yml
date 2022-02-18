@@ -2,7 +2,7 @@ name: Auto merge dependencies
 on:
   pull_request:
     branches:
-      - develop
+      - dependabot_develop
     paths:
       - yarn.lock
       - package.json
