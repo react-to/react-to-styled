@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/table",
-  "version": "0.5.9-alpha.0",
+  "version": "0.5.9-alpha.1",
   "description": "Table component with React and styled-components",
   "license": "MIT",
   "author": {
@@ -46,7 +46,7 @@
     "styled-components": ">=5"
   },
   "dependencies": {
-    "@react-to-styled/essentials": "^0.2.9-alpha.0",
-    "@react-to-styled/loader": "^0.2.9-alpha.0"
+    "@react-to-styled/essentials": "^0.2.9-alpha.1",
+    "@react-to-styled/loader": "^0.2.9-alpha.1"
   }
 }
