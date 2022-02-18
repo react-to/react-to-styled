@@ -35,9 +35,9 @@ jobs:
             .eslintcache
             **/.cache
             packages/**/node_modules/
-          key: ${{ GITHUB_REF_NAME }}-styled-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ GITHUB_REF_NAME }}-styled-
+            ${{ github.ref }}-styled-
 
       #
       # Install dependencies and build the app
@@ -68,9 +68,9 @@ jobs:
             .eslintcache
             **/.cache
             packages/**/node_modules/
-          key: ${{ GITHUB_REF_NAME }}-styled-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ GITHUB_REF_NAME }}-styled-
+            ${{ github.ref }}-styled-
 
       #
       # Run lint
@@ -111,9 +111,9 @@ jobs:
             .eslintcache
             **/.cache
             packages/**/node_modules/
-          key: ${{ GITHUB_REF_NAME }}-styled-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ GITHUB_REF_NAME }}-styled-
+            ${{ github.ref }}-styled-
 
       #
       # Set git identity to be a bot
@@ -133,7 +133,7 @@ jobs:
         if: |
           env.GIT_COMMIT_MESSAGE &&
           !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
-          GITHUB_REF_NAME == 'main'
+          github.ref == 'refs/heads/main'
         run: lerna publish --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -145,7 +145,7 @@ jobs:
         if: |
           env.GIT_COMMIT_MESSAGE &&
           !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
-          GITHUB_REF_NAME == 'develop'
+          github.ref == 'refs/heads/develop'
         run: lerna publish --yes --conventional-prerelease
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
