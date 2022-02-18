@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.7 (2022-02-18)
+
+
+### Bug Fixes
+
+* **root:** Add NODE_TOKEN for lerna as well ([85c363a](https://github.com/react-to/react-to-styled/commit/85c363adbd1310a19a0a0ec0107ac7ba79b1ea5d))
+
+
+
+
+
 ## 0.2.6 (2022-02-18)
 
 **Note:** Version bump only for package @react-to-styled/loader
