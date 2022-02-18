@@ -20,6 +20,7 @@
 - [`@react-to-styled/table`](https://github.com/react-to/react-to-styled/tree/main/packages/table) – table related components
 - [`@react-to-styled/loader`](https://github.com/react-to/react-to-styled/tree/main/packages/loader) – loader component
 - [`@react-to-styled/toggle`](https://github.com/react-to/react-to-styled/tree/main/packages/toggle) – toggle component
+- [`@react-to-styled/icon`](https://github.com/react-to/react-to-styled/tree/main/packages/icon) – icon component with defined svg icons
 
 ## Getting help
 
