@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0-alpha.0 (2022-02-18)
+
+
+### Features
+
+* **root:** Change dependabot target branch ([885d844](https://github.com/react-to/react-to-styled/commit/885d844e5e9dfc7bb531a311e6195855fd531e35))
+
+
+
+
+
 ## 0.2.9-alpha.3 (2022-02-18)
 
 **Note:** Version bump only for package @react-to-styled/loader
