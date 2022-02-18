@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - develop
   pull_request:
     branches:
       - main
+      - develop
 
 env:
   GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
@@ -33,9 +35,9 @@ jobs:
             .eslintcache
             **/.cache
             packages/**/node_modules/
-          key: release-styled-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ GITHUB_REF_NAME }}-styled-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            release-styled-
+            ${{ GITHUB_REF_NAME }}-styled-
 
       #
       # Install dependencies and build the app
@@ -66,9 +68,9 @@ jobs:
             .eslintcache
             **/.cache
             packages/**/node_modules/
-          key: release-styled-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ GITHUB_REF_NAME }}-styled-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            release-styled-
+            ${{ GITHUB_REF_NAME }}-styled-
 
       #
       # Run lint
@@ -109,9 +111,9 @@ jobs:
             .eslintcache
             **/.cache
             packages/**/node_modules/
-          key: release-styled-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ GITHUB_REF_NAME }}-styled-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            release-styled-
+            ${{ GITHUB_REF_NAME }}-styled-
 
       #
       # Set git identity to be a bot
@@ -125,12 +127,25 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
 
       #
-      # Publish with lerna if not already published
+      # Publish release with lerna if not already published
       #
       - name: Create Release
         if: |
           env.GIT_COMMIT_MESSAGE &&
-          !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release')
+          !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
+          GITHUB_REF_NAME == 'main'
         run: lerna publish --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      #
+      # Publish a prerelease with lerna if not already published
+      #
+      - name: Create prerelease
+        if: |
+          env.GIT_COMMIT_MESSAGE &&
+          !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
+          GITHUB_REF_NAME == 'develop'
+        run: lerna publish --yes --conventional-prerelease
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
