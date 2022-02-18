@@ -1,6 +1,9 @@
 name: Deploy storybook
 
-on: [push]
+on:
+  push:
+    branches:
+      - develop
 
 jobs:
   deploy:
@@ -31,7 +34,7 @@ jobs:
       # Install dependencies and build the storybook
       #
       - name: Build components
-        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build && yarn build-storybook
+        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build-storybook
 
       #
       # Deploy the storybook to github-pages
