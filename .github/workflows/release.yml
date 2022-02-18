@@ -24,9 +24,9 @@ jobs:
       #
       # Wait for tests
       #
-      - name: Wait for app build to succeed
+      - name: Wait for tests to succeed
         uses: fountainhead/action-wait-for-check@v1.0.0
-        id: wait-for-app-build
+        id: wait-for-tests
         with:
           token: ${{ secrets.GH_SECRET }}
           checkName: tests
