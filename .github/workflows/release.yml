@@ -6,14 +6,10 @@ on:
       - main
       - develop
 
-env:
-  GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
-
 jobs:
   release:
     if: |
-      env.GIT_COMMIT_MESSAGE &&
-      !startsWith(env.GIT_COMMIT_MESSAGE , 'chore(release): Release')
+      ${{ github.event.head_commit.message }} == 'chore(release): Release'
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
