@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.8-alpha.1 (2022-02-18)
+
+
+### Bug Fixes
+
+* **root:** Return setup-node ([b5f4cb5](https://github.com/react-to/react-to-styled/commit/b5f4cb50ecc42d7f40a49117bc15dc1953e06e52))
+
+
+
+
+
 ## 0.2.8-alpha.0 (2022-02-18)
 
 
