@@ -1,4 +1,4 @@
-name: release
+name: Release
 
 on:
   push:
@@ -7,13 +7,14 @@ on:
       - develop
 
 jobs:
-  release:
+  publish:
     if: |
       github.event.head_commit.message &&
       !startsWith(github.event.head_commit.message, 'chore(release): Release')
     environment: release
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    name: Publish
     steps:
       #
       # Checkout the repository.
@@ -31,7 +32,7 @@ jobs:
         id: wait-for-tests
         with:
           token: ${{ secrets.GH_SECRET }}
-          checkName: Tests
+          checkName: Lint & Typecheck
           timeoutSeconds: 1000
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 

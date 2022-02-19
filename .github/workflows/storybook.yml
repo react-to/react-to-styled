@@ -1,4 +1,4 @@
-name: Deploy storybook
+name: Storybook
 
 on:
   push:
@@ -16,6 +16,7 @@ jobs:
       github.event.head_commit.message &&
       !startsWith(github.event.head_commit.message, 'chore(release): Release')
     environment: storybook
+    name: Build & deploy
     runs-on: ubuntu-latest
     steps:
       #

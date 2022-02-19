@@ -1,4 +1,4 @@
-name: Lint
+name: Tests
 
 on:
   push:
@@ -15,6 +15,7 @@ env:
 
 jobs:
   build:
+    name: Build components
     runs-on: ubuntu-latest
     steps:
       #
@@ -47,7 +48,7 @@ jobs:
         run: yarn install --frozen-lockfile && yarn bootstrap && yarn build
 
   tests:
-    name: Tests
+    name: Lint & Typecheck
     needs: [build]
     runs-on: ubuntu-latest
     steps:
