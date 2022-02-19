@@ -11,6 +11,7 @@ jobs:
     if: |
       github.event.head_commit.message &&
       !startsWith(github.event.head_commit.message, 'chore(release): Release')
+    environment: release
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
