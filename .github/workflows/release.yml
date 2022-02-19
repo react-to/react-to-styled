@@ -11,9 +11,7 @@ env:
 
 jobs:
   release:
-    if: |
-      env.GIT_COMMIT_MESSAGE &&
-      !startsWith(GIT_COMMIT_MESSAGE , 'chore(release): Release')
+    if: ${{ env.GIT_COMMIT_MESSAGE && !startsWith(env.GIT_COMMIT_MESSAGE , "chore(release)") }}
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
