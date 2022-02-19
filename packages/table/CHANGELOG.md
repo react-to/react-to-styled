@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0-alpha.2 (2022-02-19)
+
+
+### Bug Fixes
+
+* **root:** Try a different if statement for release ([5121d64](https://github.com/react-to/react-to-styled/commit/5121d648dcd306785c922e33c0c4c14ed8e0ae11))
+
+
+
+
+
 # 0.6.0-alpha.1 (2022-02-18)
 
 **Note:** Version bump only for package @react-to-styled/table
