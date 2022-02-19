@@ -10,14 +10,11 @@ on:
       - packages/**
       - .storybook/**
 
-env:
-  GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
-
 jobs:
   deploy:
     if: |
-      env.GIT_COMMIT_MESSAGE &&
-      !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
+      github.event.head_commit.message &&
+      !startsWith(github.event.head_commit.message, 'chore(release): Release')
     runs-on: ubuntu-latest
     steps:
       #
