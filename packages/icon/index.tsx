@@ -10,25 +10,32 @@ export interface IconProps extends Omit<Props, 'src'> {
   /**
    * Possible values for `name` prop of `Icon` component.
    */
-  name: IconNamesType
+  readonly name: IconNamesType
   /**
    * This number represents width and height of icon. Defaults to 16px
    * */
-  size?: number
+  readonly size?: number
   /**
    * This represents icon color you want to render
    * */
-  color?: string
+  readonly color?: string
 }
 
 export const Icon = styled(
-  ({ name, size = 16, color = 'gray', ...props }: IconProps): JSX.Element => {
+  ({
+    name,
+    size = 16,
+    color = 'gray',
+    className,
+    ...props
+  }: IconProps): JSX.Element => {
     const icon = require(`./icons/${name}.svg`) as string
     return (
       <InlineSVG
         src={icon}
         loader={<Loader loaderSize={size} />}
         style={{ width: size, height: size, fill: color }}
+        className={`rts-icon ${className}`}
         {...props}
       />
     )
