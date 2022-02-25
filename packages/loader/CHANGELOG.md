@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0-alpha.3 (2022-02-25)
+
+
+### Features
+
+* **stories:** Add icon stories ([c5c7b53](https://github.com/react-to/react-to-styled/commit/c5c7b53e5621b122c3f45a02c253d425462ef7a5))
+
+
+
+
+
 # 0.3.0-alpha.2 (2022-02-19)
 
 
