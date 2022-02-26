@@ -20,11 +20,11 @@
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://react-to.github.io/react-to-styled/?path=/story/toggle--page",
+  "homepage": "https://react-to.github.io/react-to-styled/?path=/story/icon--page",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-to/react-to-styled.git",
-    "directory": "packages/toggle"
+    "directory": "packages/icon"
   },
   "bugs": {
     "url": "https://github.com/react-to/react-to-styled/issues",

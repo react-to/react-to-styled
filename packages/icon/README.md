@@ -55,12 +55,10 @@ import ReactDOM from 'react-dom'
 import { Icon } from '@react-to-styled/icon'
 
 function App() {
-  const [checked, setChecked] = useState()
-
   return <Icon name="arrow-down" />
 }
 
 ReactDOM.render(<App />, document.querySelector('#app'))
 ```
 
-You can also check our [storybook](https://react-to.github.io/react-to-styled) for more examples
+You can also check our [storybook](https://react-to.github.io/react-to-styled/?path=/story/icon--page) for more examples
