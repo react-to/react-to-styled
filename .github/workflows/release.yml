@@ -77,7 +77,7 @@ jobs:
       #
       - name: Create Release
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: lerna publish --yes
+        run: lerna publish --conventional-graduate --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
