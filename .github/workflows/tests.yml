@@ -1,0 +1,89 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+env:
+  GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+
+jobs:
+  build:
+    name: Build components
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Checkout the repository.
+      #
+      - uses: actions/checkout@v2
+        id: checkout
+
+      #
+      # Cache files
+      #
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        id: use-cache
+        with:
+          path: |
+            node_modules/
+            .eslintcache
+            **/.cache
+            packages/**/node_modules/
+          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ github.ref }}-styled-
+
+      #
+      # Install dependencies and build the app
+      #
+      - name: Build components
+        id: build-project
+        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build
+
+  tests:
+    name: Lint & Typecheck
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Checkout the repository.
+      #
+      - uses: actions/checkout@v2
+        id: checkout
+
+      #
+      # Cache files
+      #
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        id: cache
+        with:
+          path: |
+            node_modules/
+            .eslintcache
+            **/.cache
+            packages/**/node_modules/
+          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ github.ref }}-styled-
+
+      #
+      # Run lint
+      #
+      - name: Lint
+        id: lint
+        run: NODE=production yarn lint
+
+      #
+      # Run type-check
+      #
+      - name: Typecheck
+        id: typecheck
+        run: yarn typecheck

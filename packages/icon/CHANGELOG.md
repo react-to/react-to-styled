@@ -3,9 +3,112 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0-alpha.4 (2022-02-26)
+
+**Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
+# 0.3.0-alpha.3 (2022-02-25)
+
+
+### Features
+
+* **stories:** Add icon stories ([c5c7b53](https://github.com/react-to/react-to-styled/commit/c5c7b53e5621b122c3f45a02c253d425462ef7a5))
+
+
+
+
+
+# 0.3.0-alpha.2 (2022-02-19)
+
+
+### Bug Fixes
+
+* **root:** Try a different if statement for release ([5121d64](https://github.com/react-to/react-to-styled/commit/5121d648dcd306785c922e33c0c4c14ed8e0ae11))
+
+
+
+
+
+# 0.3.0-alpha.1 (2022-02-18)
+
+**Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
+# 0.3.0-alpha.0 (2022-02-18)
+
+
+### Features
+
+* **root:** Change dependabot target branch ([885d844](https://github.com/react-to/react-to-styled/commit/885d844e5e9dfc7bb531a311e6195855fd531e35))
+
+
+
+
+
+## 0.2.9-alpha.3 (2022-02-18)
+
+**Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
+## 0.2.9-alpha.2 (2022-02-18)
+
+**Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
+## 0.2.9-alpha.1 (2022-02-18)
+
+**Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
+## 0.2.9-alpha.0 (2022-02-18)
+
+**Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
 ## 0.2.8 (2022-02-18)
 
 **Note:** Version bump only for package @react-to-styled/icon
+
+
+
+
+
+## 0.2.8-alpha.1 (2022-02-18)
+
+
+### Bug Fixes
+
+* **root:** Return setup-node ([b5f4cb5](https://github.com/react-to/react-to-styled/commit/b5f4cb50ecc42d7f40a49117bc15dc1953e06e52))
+
+
+
+
+
+## 0.2.8-alpha.0 (2022-02-18)
+
+
+### Bug Fixes
+
+* **root:** Invalid variable ([6df9402](https://github.com/react-to/react-to-styled/commit/6df9402ba0d11484a1c732e33efc80e7af3e21d8))
 
 
 

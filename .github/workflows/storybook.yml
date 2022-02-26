@@ -1,0 +1,56 @@
+name: Storybook
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - yarn.lock
+      - stories/**
+      - packages/**
+      - .storybook/**
+
+jobs:
+  deploy:
+    if: |
+      github.event.head_commit.message &&
+      !startsWith(github.event.head_commit.message, 'chore(release): Release')
+    environment: storybook
+    name: Build & deploy
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Checkout the project
+      #
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      #
+      # Cache files
+      #
+      - name: Cache
+        uses: actions/cache@v2.1.6
+        with:
+          path: |
+            node_modules/
+            .eslintcache
+            **/.cache
+            packages/**/node_modules/
+          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ github.ref }}-styled-
+
+      #
+      # Install dependencies and build the storybook
+      #
+      - name: Build components
+        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build-storybook
+
+      #
+      # Deploy the storybook to github-pages
+      #
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages-new
+          folder: storybook-static
