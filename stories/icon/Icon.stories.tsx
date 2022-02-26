@@ -14,12 +14,6 @@ export default {
   },
 } as Meta
 
-export const IconPreLoader = () => {
-  return <Icon name="arrow_down" loader={<Loader loaderSize={16} />} />
-}
-
-IconPreLoader.storyName = 'Icon loading'
-
 export const AllIcons = () => {
   return (
     <Wrapper>
