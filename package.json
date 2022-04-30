@@ -39,7 +39,8 @@
     "storybook": "start-storybook -p 6006",
     "predeploy": "yarn build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static -b gh-pages-new",
-    "build-storybook": "build-storybook --quiet -s ./packages/essentials/fonts"
+    "build-storybook": "build-storybook --quiet -s ./packages/essentials/fonts",
+    "chromatic": "npx chromatic --project-token=258e1e47cf84"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
