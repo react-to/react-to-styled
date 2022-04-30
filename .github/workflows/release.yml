@@ -72,7 +72,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           token: ${{ secrets.NPM_TOKEN }}
 
-      #
+      # 
       # Publish release with lerna if not already published
       #
       - name: Create Release
