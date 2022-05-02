@@ -8,5 +8,5 @@ updates:
     schedule:
       interval: 'monthly'
     open-pull-requests-limit: 30
-    target-branch: develop
+    target-branch: dependabot_develop
     versioning-strategy: increase-if-necessary

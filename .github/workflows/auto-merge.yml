@@ -2,15 +2,15 @@ name: Auto merge dependencies
 on:
   pull_request:
     branches:
-      - main
+      - dependabot_develop
     paths:
       - yarn.lock
       - package.json
 
 jobs:
   automerge:
-    runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
     
     permissions:
       pull-requests: write

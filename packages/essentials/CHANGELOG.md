@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0-alpha.4 (2022-02-26)
+
+**Note:** Version bump only for package @react-to-styled/essentials
+
+
+
+
+
+# 0.3.0-alpha.3 (2022-02-25)
+
+
+### Features
+
+* **stories:** Add icon stories ([c5c7b53](https://github.com/react-to/react-to-styled/commit/c5c7b53e5621b122c3f45a02c253d425462ef7a5))
+
+
+
+
+
+# 0.3.0-alpha.2 (2022-02-19)
+
+
+### Bug Fixes
+
+* **root:** Try a different if statement for release ([5121d64](https://github.com/react-to/react-to-styled/commit/5121d648dcd306785c922e33c0c4c14ed8e0ae11))
+
+
+
+
+
+# 0.3.0-alpha.1 (2022-02-18)
+
+**Note:** Version bump only for package @react-to-styled/essentials
+
+
+
+
+
+# 0.3.0-alpha.0 (2022-02-18)
+
+
+### Features
+
+* **root:** Change dependabot target branch ([885d844](https://github.com/react-to/react-to-styled/commit/885d844e5e9dfc7bb531a311e6195855fd531e35))
+
+
+
+
+
 ## 0.2.9-alpha.3 (2022-02-18)
 
 **Note:** Version bump only for package @react-to-styled/essentials

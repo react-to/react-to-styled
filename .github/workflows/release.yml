@@ -1,95 +1,20 @@
-name: release
+name: Release
 
 on:
   push:
     branches:
       - main
       - develop
-  pull_request:
-    branches:
-      - main
-      - develop
-
-env:
-  GIT_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
 
 jobs:
-  build:
+  publish:
+    if: |
+      github.event.head_commit.message &&
+      !startsWith(github.event.head_commit.message, 'chore(release): Release')
+    environment: release
+    timeout-minutes: 10
     runs-on: ubuntu-latest
-    steps:
-      #
-      # Checkout the repository.
-      #
-      - uses: actions/checkout@v2
-        id: checkout
-
-      #
-      # Cache files
-      #
-      - name: Cache
-        uses: actions/cache@v2.1.6
-        id: use-cache
-        with:
-          path: |
-            node_modules/
-            .eslintcache
-            **/.cache
-            packages/**/node_modules/
-          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ github.ref }}-styled-
-
-      #
-      # Install dependencies and build the app
-      #
-      - name: Build components
-        id: build-project
-        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build
-
-  test:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      #
-      # Checkout the repository.
-      #
-      - uses: actions/checkout@v2
-        id: checkout
-
-      #
-      # Cache files
-      #
-      - name: Cache
-        uses: actions/cache@v2.1.6
-        id: cache
-        with:
-          path: |
-            node_modules/
-            .eslintcache
-            **/.cache
-            packages/**/node_modules/
-          key: ${{ github.ref }}-styled-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ github.ref }}-styled-
-
-      #
-      # Run lint
-      #
-      - name: Lint
-        id: lint
-        run: NODE=production yarn lint
-
-      #
-      # Run type-check
-      #
-      - name: Typecheck
-        id: typecheck
-        run: yarn typecheck
-
-  release:
-    if: ${{ github.event_name != 'pull_request' }}
-    needs: [build, test]
-    runs-on: ubuntu-latest
+    name: Publish
     steps:
       #
       # Checkout the repository.
@@ -98,6 +23,18 @@ jobs:
         id: checkout
         with:
           token: ${{ secrets.GH_SECRET }}
+
+      #
+      # Wait for tests
+      #
+      - name: Wait for tests to succeed
+        uses: fountainhead/action-wait-for-check@v1.0.0
+        id: wait-for-tests
+        with:
+          token: ${{ secrets.GH_SECRET }}
+          checkName: Lint & Typecheck
+          timeoutSeconds: 1000
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       #
       # Set git identity to be a bot
@@ -135,15 +72,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           token: ${{ secrets.NPM_TOKEN }}
 
-      #
+      # 
       # Publish release with lerna if not already published
       #
       - name: Create Release
-        if: |
-          env.GIT_COMMIT_MESSAGE &&
-          !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
-          github.ref == 'refs/heads/main'
-        run: lerna publish --yes
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: lerna publish --conventional-graduate --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -151,10 +85,7 @@ jobs:
       # Publish a prerelease with lerna if not already published
       #
       - name: Create prerelease
-        if: |
-          env.GIT_COMMIT_MESSAGE &&
-          !startsWith(env.GIT_COMMIT_MESSAGE, 'chore(release): Release') &&
-          github.ref == 'refs/heads/develop'
+        if: ${{ github.ref == 'refs/heads/develop' }}
         run: lerna publish --yes --conventional-prerelease
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
