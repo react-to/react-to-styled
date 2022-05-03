@@ -28,8 +28,8 @@
     "url": "https://github.com/react-to/react-to-styled.git",
     "directory": "packages/table"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/table.js",
+  "types": "dist/table.d.ts",
   "files": [
     "CHANGELOG.md",
     "README.md",
@@ -37,8 +37,8 @@
     "dist/"
   ],
   "scripts": {
-    "typecheck": "tsc --declaration",
-    "prepublish": "yarn typecheck"
+    "build": "xrollup index.ts",
+    "prepublish": "yarn build"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -48,5 +48,8 @@
   "dependencies": {
     "@react-to-styled/essentials": "^0.3.0-alpha.4",
     "@react-to-styled/loader": "^0.3.0-alpha.4"
+  },
+  "devDependencies": {
+    "@react-to-styled/build": "0.1.0"
   }
 }

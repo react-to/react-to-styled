@@ -1,0 +1,11 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "noEmit": false
+  }
+}

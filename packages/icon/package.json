@@ -18,8 +18,8 @@
     "toggle",
     "switch"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/icon.js",
+  "types": "dist/icon.d.ts",
   "homepage": "https://react-to.github.io/react-to-styled/?path=/story/icon--page",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
-    "build": "tsc --declaration && cp -R icons ./dist",
+    "build": "xrollup index.tsx --icons=./icons/**",
     "prepublish": "yarn build"
   },
   "files": [
@@ -47,7 +47,11 @@
     "styled-components": ">=5"
   },
   "dependencies": {
+    "@react-to-styled/essentials": "^0.3.0-alpha.4",
     "@react-to-styled/loader": "^0.3.0-alpha.4",
     "react-inlinesvg": "^2.3.0"
+  },
+  "devDependencies": {
+    "@react-to-styled/build": "0.1.0"
   }
 }
