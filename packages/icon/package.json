@@ -1,6 +1,6 @@
 {
   "name": "@react-to-styled/icon",
-  "version": "0.3.0-alpha.4",
+  "version": "0.3.0",
   "description": "Toggle input",
   "author": {
     "name": "Aleksa Toljic",
@@ -47,8 +47,8 @@
     "styled-components": ">=5"
   },
   "dependencies": {
-    "@react-to-styled/essentials": "^0.3.0-alpha.4",
-    "@react-to-styled/loader": "^0.3.0-alpha.4",
+    "@react-to-styled/essentials": "^0.3.0",
+    "@react-to-styled/loader": "^0.3.0",
     "react-inlinesvg": "^2.3.0"
   },
   "devDependencies": {
