@@ -43,5 +43,8 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "styled-components": ">=5"
+  },
+  "devDependencies": {
+    "@react-to-styled/build": "0.1.0"
   }
 }

@@ -40,5 +40,8 @@
   "license": "MIT",
   "peerDependencies": {
     "styled-components": ">=5"
+  },
+  "devDependencies": {
+    "@react-to-styled/build": "0.1.0"
   }
 }
