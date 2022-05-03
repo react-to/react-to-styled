@@ -33,6 +33,8 @@ jobs:
       #
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       #
       # Cache files
@@ -53,7 +55,7 @@ jobs:
       # Install dependencies
       #
       - name: Build components
-        run: yarn install --frozen-lockfile && yarn bootstrap
+        run: yarn install --frozen-lockfile && yarn bootstrap && yarn build
 
       #
       # Publish storybook on Chromatic and accept changes.
