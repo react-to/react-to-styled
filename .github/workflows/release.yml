@@ -73,6 +73,12 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
 
       # 
+      # Prepare build
+      #
+      - name: Prepare build
+        run: yarn build --scope="@react-to-styled/build"
+
+      # 
       # Publish release with lerna if not already published
       #
       - name: Create Release
