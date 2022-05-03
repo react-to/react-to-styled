@@ -16,8 +16,8 @@
     "reuseable",
     "ui"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/components.js",
+  "types": "dist/components.d.ts",
   "homepage": "https://react-to.github.io/react-to-styled",
   "repository": {
     "type": "git",
