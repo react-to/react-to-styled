@@ -18,8 +18,8 @@
     "toggle",
     "switch"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/toggle.js",
+  "types": "dist/toggle.d.ts",
   "homepage": "https://react-to.github.io/react-to-styled/?path=/story/toggle--page",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
-    "build": "tsc --declaration",
+    "build": "xrollup index.tsx",
     "prepublish": "yarn build"
   },
   "files": [

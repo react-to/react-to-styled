@@ -15,8 +15,8 @@
     "ui",
     "essentials"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/essentials.js",
+  "types": "dist/essentials.d.ts",
   "homepage": "https://react-to.github.io/react-to-styled",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "email": "aleksa.toljic@gmail.com"
   },
   "scripts": {
-    "build": "tsc --declaration && cp -R fonts ./dist",
+    "build": "xrollup index.ts",
     "prepublish": "yarn build"
   },
   "files": [
