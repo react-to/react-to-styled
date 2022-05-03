@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1-alpha.2 (2022-05-03)
+
+
+### Bug Fixes
+
+* **components:** Entry files ([24e9fab](https://github.com/react-to/react-to-styled/commit/24e9fab4453125dfb65a29fd74fefe77d82a4f62))
+
+
+
+
+
 ## 0.3.1-alpha.1 (2022-05-03)
 
 
