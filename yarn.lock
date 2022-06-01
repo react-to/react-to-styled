@@ -2871,7 +2871,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-measure@6.4.19", "@storybook/addon-measure@^6.4.14":
+"@storybook/addon-measure@6.4.19":
   version "6.4.19"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.4.19.tgz#cd648a3d07b84505863f6d9918c6023a2921a596"
   integrity sha512-PXeU0AlpnGEvnzBQ6snkzmlIpwE0ci8LdFtL1Vz1V1Xk5fbuETWYuEkPuk1oZ7L9igB9cfT32SyJlE5MC1iaGg==
@@ -2882,6 +2882,20 @@
     "@storybook/components" "6.4.19"
     "@storybook/core-events" "6.4.19"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
+    core-js "^3.8.2"
+    global "^4.4.0"
+
+"@storybook/addon-measure@^6.4.14":
+  version "6.5.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.5.6.tgz#843de6286861fed1761544adecf3c49d2982136c"
+  integrity sha512-V+KKoCTMVakExVmNiSu/1AHVsOgxUt62wo/Xm2fJvtRz+y/5LFFCLnENcN7/8qDTya8vgaHY7FR69zHvGiR4SA==
+  dependencies:
+    "@storybook/addons" "6.5.6"
+    "@storybook/api" "6.5.6"
+    "@storybook/client-logger" "6.5.6"
+    "@storybook/components" "6.5.6"
+    "@storybook/core-events" "6.5.6"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     global "^4.4.0"
 
