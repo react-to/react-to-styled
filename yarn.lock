@@ -2876,7 +2876,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-measure@6.5.6", "@storybook/addon-measure@^6.4.14":
+"@storybook/addon-measure@6.5.6":
   version "6.5.6"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.5.6.tgz#843de6286861fed1761544adecf3c49d2982136c"
   integrity sha512-V+KKoCTMVakExVmNiSu/1AHVsOgxUt62wo/Xm2fJvtRz+y/5LFFCLnENcN7/8qDTya8vgaHY7FR69zHvGiR4SA==
@@ -2886,6 +2886,20 @@
     "@storybook/client-logger" "6.5.6"
     "@storybook/components" "6.5.6"
     "@storybook/core-events" "6.5.6"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    core-js "^3.8.2"
+    global "^4.4.0"
+
+"@storybook/addon-measure@^6.4.14":
+  version "6.5.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.5.9.tgz#f949d4f5f4025c839634114365f1399ea04bd0ae"
+  integrity sha512-0aA22wD0CIEUccsEbWkckCOXOwr4VffofMH1ToVCOeqBoyLOMB0gxFubESeprqM54CWsYh2DN1uujgD6508cwA==
+  dependencies:
+    "@storybook/addons" "6.5.9"
+    "@storybook/api" "6.5.9"
+    "@storybook/client-logger" "6.5.9"
+    "@storybook/components" "6.5.9"
+    "@storybook/core-events" "6.5.9"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     global "^4.4.0"
@@ -3855,14 +3869,14 @@
   dependencies:
     core-js "^3.8.2"
 
-"@storybook/core-events@6.5.6", "@storybook/core-events@^6.4.14":
+"@storybook/core-events@6.5.6":
   version "6.5.6"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.5.6.tgz#b4e9150216810621ba00d8d1eb3f9414493d6e61"
   integrity sha512-bzktgM1i0QPrayH1ANbKb7nYpehSpi5QHWps2vVQbvtpI/pGlTtpde1e87vfAt74Bvsvd3/9IpQkQKteDODAkA==
   dependencies:
     core-js "^3.8.2"
 
-"@storybook/core-events@6.5.9":
+"@storybook/core-events@6.5.9", "@storybook/core-events@^6.4.14":
   version "6.5.9"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.5.9.tgz#5b0783c7d22a586c0f5e927a61fe1b1223e19637"
   integrity sha512-tXt7a3ZvJOCeEKpNa/B5rQM5VI7UJLlOh3IHOImWn4HqoBRrZvbourmac+PRZAtXpos0h3c6554Hjapj/Sny5Q==
