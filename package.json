@@ -42,7 +42,7 @@
     "build-storybook": "build-storybook --quiet -s ./packages/essentials/fonts"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.1.0",
+    "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^16.0.0",
     "@mdx-js/loader": "^1.6.22",
     "@storybook/addon-actions": "^6.4.14",
