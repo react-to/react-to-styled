@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "@react-to-styled/loader": "^0.3.0-alpha.4",
-    "react-inlinesvg": "^2.3.0"
+    "react-inlinesvg": "^3.0.1"
   }
 }
