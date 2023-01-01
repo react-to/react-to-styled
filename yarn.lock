@@ -2898,7 +2898,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-measure@6.5.13", "@storybook/addon-measure@^6.4.14":
+"@storybook/addon-measure@6.5.13":
   version "6.5.13"
   resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.5.13.tgz#05c0e9813fee84a13ba1172444ea99ee083acdbd"
   integrity sha512-pi5RFB9YTnESRFtYHAVRUrgEI5to0TFc4KndtwcCKt1fMJ8OFjXQeznEfdj95PFeUvW5TNUwjL38vK4LhicB+g==
@@ -2908,6 +2908,20 @@
     "@storybook/client-logger" "6.5.13"
     "@storybook/components" "6.5.13"
     "@storybook/core-events" "6.5.13"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    core-js "^3.8.2"
+    global "^4.4.0"
+
+"@storybook/addon-measure@^6.4.14":
+  version "6.5.15"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-measure/-/addon-measure-6.5.15.tgz#a174bf498168e52469f602a8d6ba6160d4b8a9d6"
+  integrity sha512-j77WX/v6qpWK8ZuYscWLIc+Am4/WOJRsVgyXLIw1EZIviQsjoXPo7mmyoTneEIbbHfPtWlLRbtmkjh8DAVDrCA==
+  dependencies:
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     global "^4.4.0"
@@ -11667,15 +11681,6 @@ loader-utils@^1.2.3:
     json5 "^1.0.1"
 
 loader-utils@^2.0.0, loader-utils@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
-  integrity sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==
-  dependencies:
-    big.js "^5.2.2"
-    emojis-list "^3.0.0"
-    json5 "^2.1.2"
-
-loader-utils@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
   integrity sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==
