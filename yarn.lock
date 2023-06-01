@@ -11216,10 +11216,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-klona@^2.0.4, klona@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.5.tgz#d166574d90076395d9963aa7a928fabb8d76afbc"
-  integrity sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==
+klona@^2.0.4, klona@^2.0.5, klona@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.6.tgz#85bffbf819c03b2f53270412420a4555ef882e22"
+  integrity sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==
 
 known-css-properties@^0.26.0:
   version "0.26.0"
@@ -11261,12 +11261,12 @@ lerna@^4.0.0:
     import-local "^3.0.2"
     npmlog "^4.1.2"
 
-less-loader@^10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-10.2.0.tgz#97286d8797dc3dc05b1d16b0ecec5f968bdd4e32"
-  integrity sha512-AV5KHWvCezW27GT90WATaDnfXBv99llDbtaj4bshq6DvAihMdNjaPDcUMa6EXKLRF+P2opFenJp89BXg91XLYg==
+less-loader@^11.1.2:
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-11.1.2.tgz#ff1ea68ce60347a0a1ec67f998ac1e56b204f6da"
+  integrity sha512-2bSaN2j13bUh/5BuwJKuY2DDWVmfBsS6oWRe8v1mGj7F0EpcL+WyWkDQVoEfsVRE4ac5/OuP44ZCaVsXWrQQ9A==
   dependencies:
-    klona "^2.0.4"
+    klona "^2.0.6"
 
 less@^4.1.2:
   version "4.1.3"
