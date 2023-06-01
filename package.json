@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
-    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/config-conventional": "^17.6.5",
     "@mdx-js/loader": "^1.6.22",
     "@storybook/addon-actions": "^6.4.14",
     "@storybook/addon-controls": "^6.4.14",
