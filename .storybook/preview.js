@@ -16,15 +16,15 @@ export const parameters = {
     page: DocsPage,
   },
   options: {
-    storySort: ([, { kind: a }], [, { kind: b }]) => {
-      if (a.includes('All stories')) {
+    storySort: (a, b) => {
+      if (a.title.includes('All stories')) {
         return 1
       }
-      if (b.includes('All stories')) {
+      if (b.title.includes('All stories')) {
         return -1
       }
 
-      return a.localeCompare(b)
+      return a.title.localeCompare(b.title)
     },
   },
   controls: { expanded: true, hideNoControlsWarning: true },

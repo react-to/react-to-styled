@@ -14,19 +14,17 @@ module.exports = {
       },
     },
     '@storybook/addon-essentials',
-    '@storybook/addon-controls',
     '@storybook/addon-storysource',
-    '@storybook/addon-actions',
     '@storybook/addon-links',
     '@storybook/addon-measure',
-    'storybook-addon-outline',
-    '@storybook/addon-viewport',
   ],
   core: {
-    builder: 'webpack4',
+    builder: 'webpack5',
+    options: { fsCache: true, lazyCompilation: true },
   },
   features: {
     postcss: false,
+    storyStoreV7: true,
     modernInlineRender: true,
   },
 
@@ -41,7 +39,7 @@ module.exports = {
     })
     config.module.rules.push({
       test: /\.scss$/,
-      loaders: [
+      use: [
         'style-loader',
         'css-loader',
         {

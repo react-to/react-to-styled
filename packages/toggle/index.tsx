@@ -115,7 +115,7 @@ const ToggleInput = styled.input<{
   z-index: 2;
   cursor: pointer;
 
-  :checked + ${ToggleBackground} {
+  &:checked + ${ToggleBackground} {
     background: ${Colors.toggleActive};
 
     &::after {
