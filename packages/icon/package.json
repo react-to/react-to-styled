@@ -53,5 +53,6 @@
   },
   "devDependencies": {
     "@react-to-styled/build": "^0.1.1-alpha.2"
-  }
+  },
+  "gitHead": "76176b8a825c8afad279dc6ed169900900eb2a56"
 }
