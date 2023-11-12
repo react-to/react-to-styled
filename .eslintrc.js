@@ -2,6 +2,8 @@ const IS_PROD = process.env.NODE_ENV === 'production'
 
 module.exports = {
   parser: '@typescript-eslint/parser',
+  plugins: ['import'],
+  root: true,
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -57,6 +59,19 @@ module.exports = {
     'react/prop-types': 'off',
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+
+        // Choose from one of the "project" configs below or omit to use <root>/tsconfig.json by default
+
+        // use <root>/path/to/folder/tsconfig.json
+        project: 'tsconfig.json',
+      },
+    },
     react: {
       version: 'detect',
     },
@@ -74,7 +89,7 @@ module.exports = {
       // If you don't want to extend any rules, you don't need an `extends` attribute.
       extends: [
         'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:@typescript-eslint/recommended-type-checked',
       ],
 
       rules: {

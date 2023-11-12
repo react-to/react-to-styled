@@ -1,8 +1,8 @@
-import { Loader } from '@react-to-styled/loader'
 import { Meta } from '@storybook/react'
 import React from 'react'
+import { styled } from 'styled-components'
+
 import { Icon, IconNames } from '@react-to-styled/icon'
-import styled from 'styled-components'
 
 export default {
   title: 'Icon/All stories',

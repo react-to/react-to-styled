@@ -1,5 +1,6 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
+
 import { Loader, LoaderProps } from '@react-to-styled/loader'
 
 export default {

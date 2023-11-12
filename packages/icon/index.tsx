@@ -1,10 +1,10 @@
 import { Loader } from '@react-to-styled/loader'
 import React from 'react'
 import InlineSVG, { Props } from 'react-inlinesvg'
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const IconNames = ['arrow_down', 'close'] as const
-type IconNamesType = typeof IconNames[number]
+type IconNamesType = (typeof IconNames)[number]
 
 export interface IconProps extends Omit<Props, 'src'> {
   /**

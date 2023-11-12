@@ -1,6 +1,6 @@
 import { Colors } from '@react-to-styled/essentials'
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 const LEFT_PAGE = 'LEFT'
 const RIGHT_PAGE = 'RIGHT'

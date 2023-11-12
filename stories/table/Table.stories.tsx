@@ -1,10 +1,11 @@
 import { Meta } from '@storybook/react'
 import React, { useState } from 'react'
-import styled from 'styled-components'
-import { CellProps, Table, TruncatedText } from '@react-to-styled/table'
-import { Colors } from '@react-to-styled/essentials'
+import { styled } from 'styled-components'
 
 import TableDocsPage from './TableDocsPage.mdx'
+
+import { CellProps, Table, TruncatedText } from '@react-to-styled/table'
+import { Colors } from '@react-to-styled/essentials'
 
 export default {
   title: 'Table/All stories',

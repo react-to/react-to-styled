@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react'
-import styled from 'styled-components'
+import React, { FunctionComponent, ComponentPropsWithoutRef } from 'react'
+import { styled } from 'styled-components'
 import { Colors } from '@react-to-styled/essentials'
 
 /**
@@ -27,7 +27,7 @@ type ToggleStyle = {
 /**
  * Table props.
  */
-export interface ToggleProps extends React.ComponentPropsWithoutRef<'input'> {
+export interface ToggleProps extends ComponentPropsWithoutRef<'input'> {
   /**
    * Setting custom size for the Toggle
    */
@@ -95,7 +95,9 @@ const ToggleBackground = styled.span<Omit<ToggleStyle, 'width'>>`
     width: ${({ circleSize }) => circleSize}px;
     height: ${({ circleSize }) => circleSize}px;
     border-radius: 50%;
-    transition: 0.5s ease transform, 0.2s ease background;
+    transition:
+      0.5s ease transform,
+      0.2s ease background;
     background: ${Colors.background};
     z-index: 0;
     box-shadow: 0 3px 6px #00000080;

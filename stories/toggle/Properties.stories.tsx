@@ -1,6 +1,7 @@
 import { useArgs } from '@storybook/client-api'
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
+
 import { Toggle, ToggleProps } from '@react-to-styled/toggle'
 
 export default {

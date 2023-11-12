@@ -1,6 +1,6 @@
 import { Colors } from '@react-to-styled/essentials'
 import React, { FunctionComponent } from 'react'
-import styled, { keyframes } from 'styled-components'
+import { styled, keyframes } from 'styled-components'
 
 /**
  * Loader props.

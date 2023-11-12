@@ -1,8 +1,9 @@
-import { Colors } from '@react-to-styled/essentials'
 import { Meta, Story } from '@storybook/react'
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import { useArgs, useEffect } from '@storybook/client-api'
+
+import { Colors } from '@react-to-styled/essentials'
 import { CellProps, Table, TableProps } from '@react-to-styled/table'
 
 const mockedData = Array(100)
@@ -62,7 +63,7 @@ export default {
 } as Meta<Partial<TableProps>>
 
 export const TableProperties: Story<TableProps> = args => {
-  const [_, updateArgs] = useArgs()
+  const [, updateArgs] = useArgs()
   const onPagination = (p: number) => {
     updateArgs({
       ...args,

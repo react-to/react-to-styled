@@ -1,7 +1,7 @@
 import { Colors, Fonts } from '@react-to-styled/essentials'
 import { Loader } from '@react-to-styled/loader'
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React, { useState, ComponentPropsWithoutRef } from 'react'
+import { styled } from 'styled-components'
 
 import { Paginator, PaginatorProps } from './Paginator'
 
@@ -53,7 +53,7 @@ interface ColumnData {
 /**
  * Table props.
  */
-export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
+export interface TableProps extends ComponentPropsWithoutRef<'table'> {
   /**
    * Required data prop, should be array of objects.
    */
@@ -77,7 +77,7 @@ export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
  */
 interface RowProps
   extends Pick<TableProps, 'columns'>,
-    React.ComponentPropsWithoutRef<'tr'> {
+    ComponentPropsWithoutRef<'tr'> {
   /**
    * Row index.
    */

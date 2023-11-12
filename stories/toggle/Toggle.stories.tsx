@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/react'
 import React from 'react'
+
 import { Toggle } from '@react-to-styled/toggle'
 
 export default {
